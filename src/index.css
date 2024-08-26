@@ -44,9 +44,9 @@ body {
 /* ============================    ESTILOS GENERALES   ========================== */
 /* ============================         NAVBAR         ========================== */
 
-.navbar {
-  margin-top: 50px;
-}
+/* .navbar {
+  margin-top: 45px;
+} */
 
 /* Estilos para el AppBar */
 .custom-app-bar {
@@ -83,7 +83,7 @@ body {
 .main-container {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 20px;
   width: 100%;
 }
 
@@ -163,17 +163,15 @@ h1 {
 }
 
 @media (min-width: 768px) {
-  /* Aquí puedes agregar estilos para pantallas mayores a 768px */
-  .section1 {
-    margin-top: 46px;
+  .h1Title {
+    min-height: 15rem;
   }
-  /* Puedes agregar más estilos específicos para esta resolución aquí */
 }
 
 /* Estilos para el título principal */
 .titulo-principal {
-  margin-top: 0;
-  font-size: 14vw; /* Tamaño de fuente responsivo */
+  margin-top: 7rem;
+  font-size: 7vw; /* Tamaño de fuente responsivo */
   line-height: 1;
   word-wrap: break-word; /* Permite que las palabras se rompan si es necesario */
   overflow-wrap: break-word; /* Asegura que el texto no se desborde */
@@ -183,36 +181,38 @@ h1 {
 /* Ajustes responsivos para el título principal */
 @media screen and (max-width: 768px) {
   .titulo-principal {
-    font-size: 12vw;
+    font-size: 8vw;
   }
 }
-
 @media screen and (max-width: 480px) {
   .titulo-principal {
-    font-size: 10vw;
+    font-size: 8.5vw;
   }
 }
 
 /* Aplicamos el margen superior a .section1 */
-.section1 {
-  margin-top: 46px;
-}
+/* .section1 {
+  margin-top: 152px;
+} */
 
 /* Mantenemos el mismo margen para pantallas más grandes */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .section1 {
-    margin-top: 46px;
+    margin-top: 40px;
   }
-}
+} */
 
+.changing-text {
+  font-weight: 200; 
+}
 /* ============================   Section HERO1 ========================== */
 /* ============================   Section HERO2 ========================== */
-
+/* 
 @media (min-width: 768px) {
   .section2 {
-    margin-top: 46px;
+    margin-top: 10px;
   }
-}
+} */
 
 .section2 {
   /* background-color: aqua; */
@@ -286,6 +286,42 @@ h1 {
   line-height: 130%;
 }
 
+.container2-1 a {
+  color: black;
+  text-decoration: underline;
+  transition: font-weight 0.3s ease;
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.container2-1 a:hover {
+  font-weight: bold;
+}
+
+.container2-2 p {
+  font-size: 20px;
+  line-height: 140%;
+}
+
+/* Ajustes responsivos para el texto en container2-2 */
+@media screen and (max-width: 1024px) {
+  .container2-2 p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container2-2 p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container2-2 p {
+    font-size: 14px;
+  }
+}
+
 /* ============================   Section HERO2 ========================== */
 /* ============================   Section ENCABEZADO PROJECTS ========================== */
 
@@ -311,6 +347,48 @@ h1 {
   margin: 0;
 }
 
+.container3-2 h3 {
+  font-size: 48px;
+  line-height: 120%;
+}
+
+.container3-3 p {
+  font-size: 20px;
+  line-height: 140%;
+}
+
+/* Sección Proyectos */
+.column-footer-s4 p {
+  font-size: 20px;
+  line-height: 140%;
+}
+
+/* Sección Expertise */
+.expertise-title {
+  font-size: 64px;
+  line-height: 110%;
+}
+
+.expertiseFlexItems h4 {
+  font-size: 32px;
+  line-height: 130%;
+}
+
+.expertiseFlexItems p {
+  font-size: 20px;
+  line-height: 140%;
+}
+
+/* Sección Testimonials */
+.section-testimonials h3 {
+  font-size: 64px;
+  line-height: 110%;
+}
+
+.testimonial-content {
+  font-size: 48px;
+  line-height: 130%;
+}
 /* ============================   Section ENCABEZADO PROJECTS ========================== */
 /* ============================   Section PROJECTS ========================== */
 
@@ -345,10 +423,10 @@ h1 {
 }
 
 .column-content-s4 {
-  max-height: 31.25rem; /* (1629-1129)/16 */
+  max-height: 27rem; /* (1629-1129)/16 */
   /* background-color: rgb(86, 235, 86); */
 
-  aspect-ratio: 1/1.366;
+  aspect-ratio: 1/1;
   width: 100%;
   /* flex-shrink: 1.5; */
 }
@@ -547,79 +625,14 @@ h1 {
 .email-button:hover {
   background-color: #333;
 }
-/* ============================    Section LET'S TALK    ========================== */
-
-/* ============================    Estilos adicionales para Home    ========================== */
-
-.container2-1 a {
-  color: black;
-  text-decoration: underline;
-  transition: font-weight 0.3s ease;
-  font-size: 20px;
-  line-height: 140%;
-}
-
-.container2-1 a:hover {
-  font-weight: bold;
-}
-
-.container2-2 p {
-  font-size: 20px;
-  line-height: 140%;
-}
-
-/* Sección 3 */
-.container3-2 h3 {
-  font-size: 48px;
-  line-height: 120%;
-}
-
-.container3-3 p {
-  font-size: 20px;
-  line-height: 140%;
-}
-
-/* Sección Proyectos */
-.column-footer-s4 p {
-  font-size: 20px;
-  line-height: 140%;
-}
-
-/* Sección Expertise */
-.expertise-title {
-  font-size: 64px;
-  line-height: 110%;
-}
-
-.expertiseFlexItems h4 {
-  font-size: 32px;
-  line-height: 130%;
-}
-
-.expertiseFlexItems p {
-  font-size: 20px;
-  line-height: 140%;
-}
-
-/* Sección Testimonials */
-.section-testimonials h3 {
-  font-size: 64px;
-  line-height: 110%;
-}
-
-.testimonial-content {
-  font-size: 48px;
-  line-height: 130%;
-}
-
-/* Actualización de estilos existentes para Let's Talk */
 .lets-talk-flexItem h2 {
   font-size: 140px;
   margin: 0;
   line-height: 1;
 }
+/* ============================    Section LET'S TALK    ========================== */
 
-/* Sección Slider (si no existe ya) */
+/* ============================    SLIDER    ========================== */
 .slider-container {
   width: 100vw;
   margin-left: -50vw;
@@ -648,7 +661,7 @@ h1 {
     transform: translateX(-50%);
   }
 }
-
+/* ============================    SLIDER    ========================== */
 /* ============================   Flexbox ========================== */
 
 /* Un resumen :  
@@ -741,3 +754,5 @@ h1 {
   min-height: 200px;
   flex-grow: 1;
 }
+
+/*=====================      efecto paralex      ==================== */

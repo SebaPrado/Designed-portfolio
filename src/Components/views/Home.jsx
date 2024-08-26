@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import equalvision from "../../../public/vinyl.jpg";
 import alusur from "../../../public/alusurco.jpg";
 import movie from "../../../public/popcorn.jpg";
@@ -34,14 +34,47 @@ function Home() {
     { icon: FaFigma, name: "Figma" },
   ];
 
+  const [displayedWord, setDisplayedWord] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const words = ["a twist", "an approach"];
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    let timer;
+
+    const typeEffect = () => {
+      const currentWord = words[wordIndex];
+      const shouldDelete = isDeleting ? 1 : -1;
+
+      setDisplayedWord(prev => 
+        currentWord.substring(0, prev.length - shouldDelete)
+      );
+
+      if (!isDeleting && displayedWord === currentWord) {
+        setTimeout(() => setIsDeleting(true), 1000);
+      } else if (isDeleting && displayedWord === '') {
+        setIsDeleting(false);
+        setWordIndex((prev) => (prev + 1) % words.length);
+      }
+
+      timer = setTimeout(typeEffect, isDeleting ? 50 : 150);
+    };
+
+    timer = setTimeout(typeEffect, 200);
+
+    return () => clearTimeout(timer);
+  }, [displayedWord, isDeleting, wordIndex]);
+
   console.log(techIcons);
   return (
     <div className="container">
       <section className="section1">
+        <div className="h1Title">
         <h1 className="titulo-principal">
-          {" "}
-          A fullstack developer with a twistss
+          A fullstack developer with {" "}
+          <span className="changing-text">{displayedWord}</span>
         </h1>
+        </div>
       </section>
       <section className="section2">
         <div className="container2-1">

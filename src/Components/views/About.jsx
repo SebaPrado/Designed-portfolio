@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 function About() {
+
+
   return (
     <>
     <div>About</div>
@@ -21,6 +23,8 @@ function About() {
       <div className='flexbox-item flexbox-item7 '> flexbox 7</div>
       <div className='flexbox-item flexbox-item8'> flexbox 8 </div>
       <div className='flexbox-item flexbox-item9'>flexbox 9 </div>
+
+     
 
      </div>
     </>
