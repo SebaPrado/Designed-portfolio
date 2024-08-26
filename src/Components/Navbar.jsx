@@ -3,7 +3,7 @@ import '../index.css';
 import { AppBar, Toolbar, IconButton, Button, Drawer, List, ListItem, ListItemText, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import resumePDF from '../../public/Cv Sebastian Prado.pdf';
+import resumePDF from '../../public/CV Sebastian Prado.pdf';
 
 const theme = createTheme({
   typography: {
