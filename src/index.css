@@ -238,6 +238,11 @@ h1 {
   font-size: 16px; /* Tamaño base */
 }
 
+.heroParagraph {
+  font-size: 20px;
+  line-height: 140%;
+}
+
 @media screen and (min-width: 768px) and (max-width: 868px) {
   .container2-1 p,
   .container2-2 p {
@@ -274,6 +279,11 @@ h1 {
     font-size: 14px;
     line-height: 24px;
   }
+}
+
+.container2-1 h5 {
+  font-size: 24px;
+  line-height: 130%;
 }
 
 /* ============================   Section HERO2 ========================== */
@@ -361,6 +371,15 @@ h1 {
   width: 100%;
 }
 
+.more-projects-link {
+  font-size: 20px;
+  line-height: 140%;
+  margin: 0;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
 /* ============================    Section PROJECTS     ========================== */
 /* ============================    Section EXPERTISE    ========================== */
 
@@ -396,10 +415,7 @@ h1 {
 /* ============================    Section EXPERTISE    ========================== */
 /* ============================    Section SLIDER    ========================== */
 .section-slider {
-  overflow: hidden;
-  background-color: rgb(240, 230, 230);
-  padding: 20px 0;
-  width: 100%;
+  width: 100vw;
   background-color: #f0f0f0;
   overflow: hidden;
   position: relative;
@@ -407,33 +423,28 @@ h1 {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
 }
 
 .slider-container {
-  width: 100%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .slider-icons {
   display: flex;
-  animation: slide 30s linear infinite;
-  width: fit-content;
+  animation: slide 20s linear infinite;
+  width: 200%;
 }
 
 .slider-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 0 20px;
-  flex-shrink: 0;
 }
 
 .icon {
   font-size: 2rem;
-  margin-bottom: 5px;
-}
-
-.icon-name {
-  font-size: 0.8rem;
 }
 
 @keyframes slide {
@@ -506,18 +517,137 @@ h1 {
 }
 
 .lets-talk-flexContainer {
-  height: 200px;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
 }
 
-/* .lets-talk-container h2 {
-  /* Estilos para el título "Let's talk!" 
-  font-size: 2rem;
-  margin-bottom: 1rem;
-} */
+.lets-talk-flexItem {
+  text-align: center;
+}
+
+.lets-talk-flexItem h2 {
+  font-size: 140px;
+  margin: 0;
+  line-height: 1;
+}
+
+.email-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.email-button:hover {
+  background-color: #333;
+}
 /* ============================    Section LET'S TALK    ========================== */
+
+/* ============================    Estilos adicionales para Home    ========================== */
+
+.container2-1 a {
+  color: black;
+  text-decoration: underline;
+  transition: font-weight 0.3s ease;
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.container2-1 a:hover {
+  font-weight: bold;
+}
+
+.container2-2 p {
+  font-size: 20px;
+  line-height: 140%;
+}
+
+/* Sección 3 */
+.container3-2 h3 {
+  font-size: 48px;
+  line-height: 120%;
+}
+
+.container3-3 p {
+  font-size: 20px;
+  line-height: 140%;
+}
+
+/* Sección Proyectos */
+.column-footer-s4 p {
+  font-size: 20px;
+  line-height: 140%;
+}
+
+/* Sección Expertise */
+.expertise-title {
+  font-size: 64px;
+  line-height: 110%;
+}
+
+.expertiseFlexItems h4 {
+  font-size: 32px;
+  line-height: 130%;
+}
+
+.expertiseFlexItems p {
+  font-size: 20px;
+  line-height: 140%;
+}
+
+/* Sección Testimonials */
+.section-testimonials h3 {
+  font-size: 64px;
+  line-height: 110%;
+}
+
+.testimonial-content {
+  font-size: 48px;
+  line-height: 130%;
+}
+
+/* Actualización de estilos existentes para Let's Talk */
+.lets-talk-flexItem h2 {
+  font-size: 140px;
+  margin: 0;
+  line-height: 1;
+}
+
+/* Sección Slider (si no existe ya) */
+.slider-container {
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.slider-icons {
+  display: flex;
+  animation: slide 20s linear infinite;
+  width: 200%;
+}
+
+.slider-icon {
+  margin: 0 20px;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 /* ============================   Flexbox ========================== */
 

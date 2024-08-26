@@ -45,26 +45,15 @@ function Home() {
       </section>
       <section className="section2">
         <div className="container2-1">
-          <h5 style={{ fontSize: "24px", lineHeight: "130%" }}>Let's Talk</h5>
+          <h5>Let's Talk</h5>
           <p>
-            <a
-              href="mailto:sebastian.pradomelesi@gmail.com"
-              style={{
-                color: "black",
-                textDecoration: "underline",
-                transition: "font-weight 0.3s ease",
-                fontSize: "20px",
-                lineHeight: "140%",
-              }}
-              onMouseEnter={(e) => (e.target.style.fontWeight = "bold")}
-              onMouseLeave={(e) => (e.target.style.fontWeight = "normal")}
-            >
+            <a href="mailto:sebastian.pradomelesi@gmail.com">
               sebastian.pradomelesi@gmail.com
             </a>
           </p>
         </div>
         <div className="container2-2">
-          <p style={{ fontSize: "20px", lineHeight: "140%" }}>
+          <p>
             Hello, I'm Sebastian, a fullstack developer focusing in React,
             NodeJs and WordPress. Closely related to designers, I will bring
             your idea into reality.
@@ -74,25 +63,14 @@ function Home() {
       <section className="section3">
         <div className="container3-1">
           <div className="container3-2">
-            <h3 style={{ fontSize: "48px", lineHeight: "120%" }}>Projects</h3>
+            <h3>Projects</h3>
           </div>
           <div className="container3-3">
-            <p style={{ fontSize: "20px", lineHeight: "140%" }}>
-              Explore some of my most recent work.
-            </p>
+            <p>Explore some of my most recent work.</p>
           </div>
         </div>
         <div className="container3-4">
-          <p
-            style={{
-              fontSize: "20px",
-              lineHeight: "140%",
-              margin: 0,
-              fontWeight: "bold",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
+          <p className="more-projects-link">
             more <FaArrowRight style={{ marginLeft: "8px" }} />
           </p>
         </div>
@@ -109,7 +87,7 @@ function Home() {
             </div>
             <div className="column-footer-s4">
               <h3>Equalvision e-commerce</h3>
-              <p style={{ fontSize: "20px", lineHeight: "140%" }}>
+              <p>
                 Practice E-commerce site featuring a public-facing section for
                 buyers built with React-Redux. The backend API is a RESTful
                 service built with Node.js, Express, Supabase and SQL.
@@ -122,7 +100,7 @@ function Home() {
             </div>
             <div className="column-footer-s4">
               <h3>Alusur SA</h3>
-              <p style={{ fontSize: "20px", lineHeight: "140%" }}>
+              <p>
                 Company dedicated to the efficient distribution and logistics of
                 aluminum architectural systems, profiles, and glass.This project
                 was developed using Node, JavaScript, and CSS
@@ -139,7 +117,7 @@ function Home() {
             </div>
             <div className="column-footer-s4">
               <h3>Backend e-commerce</h3>
-              <p style={{ fontSize: "20px", lineHeight: "140%" }}>
+              <p>
                 E-commerce dashboard site section for managing the site, built
                 with React-Redux. . The backend API is a RESTful service built
                 with Node.js, Express, Supabase and SQL.
@@ -152,7 +130,7 @@ function Home() {
             </div>
             <div className="column-footer-s4">
               <h3>Fakeflix</h3>
-              <p style={{ fontSize: "20px", lineHeight: "140%" }}>
+              <p>
                 Fakeflix is a practice project designed to showcase an engaging
                 and user-friendly interface. It highlights the ability to create
                 a seamless browsing experience with efficient data management
@@ -168,10 +146,10 @@ function Home() {
         <h2 className="expertise-title">Expertise</h2>
         <div className="ecpertiseFlexContainer">
           <div className="expertiseFlexItems">
-            <h4 style={{ fontSize: "32px", lineHeight: "130%" }}>
+            <h4>
               <span className="dot"></span>Branding
             </h4>
-            <p style={{ fontSize: "20px", lineHeight: "140%" }}>
+            <p>
               Collaborating closely, we'll develop an impactful brand identity
               for your emerging enterprise. The full spectrum of brand analysis
               and design is addressed, culminating in a visually stunning,
@@ -180,10 +158,10 @@ function Home() {
           </div>
 
           <div className="expertiseFlexItems">
-            <h4 style={{ fontSize: "32px", lineHeight: "130%" }}>
+            <h4>
               <span className="dot"></span>Development
             </h4>
-            <p style={{ fontSize: "20px", lineHeight: "140%" }}>
+            <p>
               I create user-friendly, adaptive, engaging websites. No
               cookie-cutters. No cumbersome, complex coding. Webflow forms the
               foundation of my web development approach. I employ it to produce
@@ -192,10 +170,10 @@ function Home() {
           </div>
 
           <div className="expertiseFlexItems">
-            <h4 style={{ fontSize: "32px", lineHeight: "130%" }}>
+            <h4>
               <span className="dot"></span>UI design
             </h4>
-            <p style={{ fontSize: "20px", lineHeight: "140%" }}>
+            <p>
               I create efficient, adaptable, and engaging websites. No
               predefined patterns. No sluggish, complex code. Webflow forms the
               foundation of my web development approach. I employ it to provide
@@ -204,10 +182,10 @@ function Home() {
           </div>
 
           <div className="expertiseFlexItems">
-            <h4 style={{ fontSize: "32px", lineHeight: "130%" }}>
+            <h4>
               <span className="dot"></span>UX design
             </h4>
-            <p style={{ fontSize: "20px", lineHeight: "140%" }}>
+            <p>
               I comprehend and resolve digital product issues using a
               user-focused methodology. Investigation, compassion, and visual
               conveyance are a few techniques I apply to captivate and involve
@@ -216,51 +194,19 @@ function Home() {
           </div>
         </div>
       </section>
-      <section
-        className="section-slider"
-        style={{
-          width: "100vw",
-          backgroundColor: "#f0f0f0",
-          overflow: "hidden",
-          position: "relative",
-          left: "50%",
-          right: "50%",
-          marginLeft: "-50vw",
-          marginRight: "-50vw",
-          paddingLeft: "calc(50vw - 50%)",
-          paddingRight: "calc(50vw - 50%)",
-        }}
-      >
-        <div
-          className="slider-container"
-          style={{ width: "100vw", marginLeft: "-50vw", marginRight: "-50vw" }}
-        >
-          <div
-            className="slider-icons"
-            style={{
-              display: "flex",
-              animation: "slide 20s linear infinite",
-              width: "200%",
-            }}
-          >
+      <section className="section-slider">
+        <div className="slider-container">
+          <div className="slider-icons">
             {techIcons.map((tech, index) => (
-              <div
-                key={index}
-                className="slider-icon"
-                style={{ margin: "0 20px" }}
-              >
-                <tech.icon className="icon" style={{ fontSize: "2rem" }} />
+              <div key={index} className="slider-icon">
+                <tech.icon className="icon" />
                 <span className="icon-name">{tech.name}</span>
               </div>
             ))}
             {/* Duplicamos los iconos para crear un efecto de bucle infinito */}
             {techIcons.map((tech, index) => (
-              <div
-                key={`duplicate-${index}`}
-                className="slider-icon"
-                style={{ margin: "0 20px" }}
-              >
-                <tech.icon className="icon" style={{ fontSize: "2rem" }} />
+              <div key={`duplicate-${index}`} className="slider-icon">
+                <tech.icon className="icon" />
                 <span className="icon-name">{tech.name}</span>
               </div>
             ))}
@@ -268,12 +214,9 @@ function Home() {
         </div>
       </section>
       <section className="section-testimonials">
-        <h3 style={{ fontSize: "64px", lineHeight: "110%" }}>Testimonials</h3>
+        <h3>Testimonials</h3>
         <div className="testimonialsFlexContainer">
-          <div
-            className="testimonialsFlexItems testimonial-content"
-            style={{ fontSize: "48px", lineHeight: "130%" }}
-          >
+          <div className="testimonialsFlexItems testimonial-content">
             "Joey is a remarkable artist. He grasps abstract ideas and
             transforms them into exceptional visuals. Throughout the years, I've
             witnessed him produce everything from small symbols to comprehensive
@@ -290,26 +233,11 @@ function Home() {
       </section>
       <section className="section-lets-talk">
         <div className="lets-talk-flexContainer">
-          <div className="lets-talk-flexItem" style={{ textAlign: "center" }}>
-            <h2 style={{ fontSize: "140px", margin: "0", lineHeight: "1" }}>
-              Let's talk!
-            </h2>
+          <div className="lets-talk-flexItem">
+            <h2>Let's talk!</h2>
             <a
               href="mailto:sebastian.pradomelesi@gmail.com"
               className="email-button"
-              style={{
-                backgroundColor: "black",
-                color: "white",
-                padding: "10px 20px",
-                textDecoration: "none",
-                borderRadius: "25px",
-                display: "inline-block",
-                marginTop: "20px",
-                fontWeight: "bold",
-                transition: "background-color 0.3s ease",
-              }}
-              onMouseEnter={(e) => (e.target.style.backgroundColor = "#333")}
-              onMouseLeave={(e) => (e.target.style.backgroundColor = "black")}
             >
               sebastian.pradomelesi@gmail.com
             </a>
