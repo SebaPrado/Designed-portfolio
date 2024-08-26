@@ -1,0 +1,613 @@
+/* ============================    ESTILOS GENERALES   ========================== */
+
+/* Estilos base */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: salmon; */
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  overflow-x: hidden;
+}
+
+/* Márgenes laterales responsivos */
+
+/* Grande: 1440px a 768px */
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .container {
+    margin-left: 112px;
+    margin-right: 112px;
+  }
+}
+
+/* Mediana: 768px a 375px */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+/* Chica: menor a 375px */
+@media screen and (max-width: 374px) {
+  .container {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+.container {
+  background-color: white;
+}
+
+/* ============================    ESTILOS GENERALES   ========================== */
+/* ============================         NAVBAR         ========================== */
+
+.navbar {
+  margin-top: 50px;
+}
+
+/* Estilos para el AppBar */
+.custom-app-bar {
+  width: 100%;
+  max-width: 440px;
+  height: 62px;
+}
+
+/* Estilos para el contenedor de botones */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos para los botones */
+.custom-button {
+  text-transform: none !important;
+  border-radius: 9999px !important;
+  padding: 2px 16px !important;
+  height: calc(100% - 12px) !important;
+  color: white !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.custom-button:hover {
+  background-color: rgb(255, 255, 255) !important;
+  color: black !important;
+}
+
+/* Estilos para el contenedor principal */
+.main-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 600px) {
+  .custom-app-bar {
+    max-width: 100%;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .button-container {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block !important;
+  }
+}
+
+/* Estilos responsivos para el Navbar */
+@media screen and (max-width: 450px) {
+  .custom-app-bar {
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 50% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .custom-toolbar {
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ajuste del tamaño y posición del botón hamburguesa */
+  .menu-icon-button {
+    padding: 8px !important;
+    margin: 0 !important;
+    margin-left: 30px !important; /* Margen izquierdo adicional de 30 píxeles */
+  }
+
+  /* Eliminar el margen derecho del botón hamburguesa en modo responsivo */
+  .MuiIconButton-edgeStart {
+    margin-right: 0 !important;
+  }
+}
+
+/* Estilo para ocultar el icono de menú en pantallas grandes */
+.menu-icon {
+  display: none;
+}
+
+/* Clase para el botón hamburguesa */
+.menu-icon-button {
+  color: white !important;
+}
+
+/* Ocultar el botón hamburguesa en pantallas más grandes que 601px */
+@media (min-width: 601px) {
+  .menu-icon-button {
+    display: none !important;
+  }
+}
+
+/* ============================       NAVBAR      ========================== */
+/* ============================   Section HERO1   ========================== */
+
+h1 {
+  color: rgb(3, 3, 3);
+  font-weight: 400; /* Reducimos el grosor de la letra */
+}
+
+@media (min-width: 768px) {
+  /* Aquí puedes agregar estilos para pantallas mayores a 768px */
+  .section1 {
+    margin-top: 46px;
+  }
+  /* Puedes agregar más estilos específicos para esta resolución aquí */
+}
+
+/* Estilos para el título principal */
+.titulo-principal {
+  margin-top: 0;
+  font-size: 14vw; /* Tamaño de fuente responsivo */
+  line-height: 1;
+  word-wrap: break-word; /* Permite que las palabras se rompan si es necesario */
+  overflow-wrap: break-word; /* Asegura que el texto no se desborde */
+  max-width: 100%; /* Asegura que el texto no sea más ancho que su contenedor */
+}
+
+/* Ajustes responsivos para el título principal */
+@media screen and (max-width: 768px) {
+  .titulo-principal {
+    font-size: 12vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .titulo-principal {
+    font-size: 10vw;
+  }
+}
+
+/* Aplicamos el margen superior a .section1 */
+.section1 {
+  margin-top: 46px;
+}
+
+/* Mantenemos el mismo margen para pantallas más grandes */
+@media (min-width: 768px) {
+  .section1 {
+    margin-top: 46px;
+  }
+}
+
+/* ============================   Section HERO1 ========================== */
+/* ============================   Section HERO2 ========================== */
+
+@media (min-width: 768px) {
+  .section2 {
+    margin-top: 46px;
+  }
+}
+
+.section2 {
+  /* background-color: aqua; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 350px);
+  grid-template-areas: "container2-1 container2-2";
+  gap: 16px;
+}
+
+.container2-1 {
+  grid-area: container2-1;
+  min-width: 0;
+}
+
+.container2-1 h5 {
+  margin-bottom: calc(1rem - 6px);
+}
+
+.container2-1 p {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-size: 16px; /* Tamaño base */
+}
+
+@media screen and (min-width: 768px) and (max-width: 868px) {
+  .container2-1 p,
+  .container2-2 p {
+    font-size: 16px; /* Reducimos el tamaño de la fuente para este rango */
+  }
+}
+
+.container2-2 {
+  /* background-color: rgb(166, 197, 26); */
+  grid-area: container2-2;
+  text-align: end;
+  min-width: 0;
+}
+
+.container2-2 p {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+  .section2 {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "container2-2"
+      "container2-1";
+  }
+
+  .container2-2 {
+    text-align: start;
+  }
+
+  .container2-1 p,
+  .container2-2 p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+/* ============================   Section HERO2 ========================== */
+/* ============================   Section ENCABEZADO PROJECTS ========================== */
+
+.section3 {
+  margin-top: 144px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.container3-1 {
+  max-width: 15rem;
+}
+
+.container3-4 {
+  max-width: 10rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.container3-4 p {
+  margin: 0;
+}
+
+/* ============================   Section ENCABEZADO PROJECTS ========================== */
+/* ============================   Section PROJECTS ========================== */
+
+.sectionProjects {
+  margin-top: 2.5rem; /* 40/16 */
+  margin-bottom: 9.6875rem; /* 155px/16 */
+}
+
+.column-container-s4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* 32px */
+  justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+  .sectionProjects .column-container-s4 {
+    justify-content: space-around;
+  }
+
+  .sectionProjects .column-s4 {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.column-s4 {
+  width: calc(50% - 1rem);
+  min-width: 115px;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.column-content-s4 {
+  max-height: 31.25rem; /* (1629-1129)/16 */
+  /* background-color: rgb(86, 235, 86); */
+
+  aspect-ratio: 1/1.366;
+  width: 100%;
+  /* flex-shrink: 1.5; */
+}
+
+.column-footer-s4 {
+  height: 7.125rem; /* 114/16 */
+  margin-top: 1rem;
+  /* background-color: aquamarine; */
+}
+
+@media (min-width: 1025px) {
+  .column-s4 {
+    max-width: 31rem; /* (500)/16 */
+  }
+}
+
+.projectsImages {
+  border-radius: 20%;
+  height: 100%;
+  width: 100%;
+}
+
+/* ============================    Section PROJECTS     ========================== */
+/* ============================    Section EXPERTISE    ========================== */
+
+.ecpertiseFlexContainer {
+  width: 100%;
+  display: flex;
+  row-gap: 60px;
+  column-gap: 2rem;
+  /* background-color: darkgoldenrod; */
+  margin-bottom: 10rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.expertiseFlexItems {
+  width: 46%;
+  max-width: 442px;
+  height: fit-content;
+  /* background-color: antiquewhite; */
+}
+
+@media (max-width: 480px) {
+  .ecpertiseFlexContainer {
+    justify-content: space-around;
+  }
+
+  .expertiseFlexItems {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* ============================    Section EXPERTISE    ========================== */
+/* ============================    Section SLIDER    ========================== */
+.section-slider {
+  overflow: hidden;
+  background-color: rgb(240, 230, 230);
+  padding: 20px 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.slider-container {
+  width: 100%;
+}
+
+.slider-icons {
+  display: flex;
+  animation: slide 30s linear infinite;
+  width: fit-content;
+}
+
+.slider-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  flex-shrink: 0;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.icon-name {
+  font-size: 0.8rem;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Para hacer que el desplazamiento sea más suave */
+.slider-icons:hover {
+  animation-play-state: paused;
+}
+
+/* ============================    Section SLIDER    ========================== */
+
+/* ============================    Section TESTIMONIALS    ========================== */
+.section-testimonials {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-testimonials h3 {
+  margin-bottom: 1.5rem;
+  font-size: 64px;
+  line-height: 110%;
+}
+
+.testimonialsFlexContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.testimonialsFlexItems.testimonial-content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 60%;
+  font-size: 48px;
+  line-height: 130%;
+}
+
+.testimonialsFlexItems.testimonial-info {
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.autor {
+  margin-top: auto;
+}
+
+.autor h6 {
+  margin-bottom: 0.5rem;
+}
+
+.autor p {
+  margin: 0;
+}
+/* ============================    Section TESTIMONIALS    ========================== */
+/* ============================    Section LET'S TALK    ========================== */
+.section-lets-talk {
+  margin-top: 126px;
+  margin-bottom: 20rem;
+}
+
+.lets-talk-flexContainer {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+/* .lets-talk-container h2 {
+  /* Estilos para el título "Let's talk!" 
+  font-size: 2rem;
+  margin-bottom: 1rem;
+} */
+/* ============================    Section LET'S TALK    ========================== */
+
+/* ============================   Flexbox ========================== */
+
+/* Un resumen :  
+  1) Neceitamos un contenedor FLEXBOX-CONTAINER que envuelva un conjunto de FLEXBOX-ITEMS
+  2) Usamos las propiedades Justify-content y Align-items apra alinear esos Items dentro del Container
+  3) Usamos flex-shrink , flex-grow y flex-basis para ajustar mis items individualmente
+
+*/
+
+/* ============================   Flexbox ========================== */
+
+.flexbox-container {
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
+  background-color: antiquewhite;
+}
+
+.flexbox-item {
+  width: 200px;
+  margin: 10px;
+  border: 3px solid grey;
+  background-color: aquamarine;
+}
+
+.flexbox-item1 {
+  min-height: 100px;
+}
+.flexbox-item2 {
+  min-height: 200px;
+}
+.flexbox-item3 {
+  min-height: 300px;
+}
+
+/* ============================   Flexbox 2 ========================== */
+
+.flexbox-container2 {
+  display: flex;
+  justify-content: center;
+
+  background-color: cadetblue;
+}
+
+.flexbox-item4 {
+  min-height: 200px;
+}
+.flexbox-item5 {
+  min-height: 200px;
+  flex-shrink: 2;
+}
+.flexbox-item6 {
+  min-height: 200px;
+  flex-grow: 1;
+}
+
+/* ============================   Flexbox 3 ========================== */
+
+.flexbox-container3 {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+
+  background-color: rgb(168, 166, 32);
+}
+
+.flexbox-item {
+  margin: 10px;
+  border: 3px solid grey;
+  background-color: aquamarine;
+}
+
+.flexbox-item7 {
+  min-height: 200px;
+  flex-shrink: 2;
+  align-self: flex-end;
+  aspect-ratio: 1 / 1;
+}
+.flexbox-item8 {
+  min-height: 200px;
+  align-self: center;
+  flex-basis: 1;
+  aspect-ratio: 4 / 3;
+}
+.flexbox-item9 {
+  min-height: 200px;
+  flex-grow: 1;
+}
