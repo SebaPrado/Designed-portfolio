@@ -40,7 +40,7 @@ function Home() {
       <section className="section1">
         <h1 className="titulo-principal">
           {" "}
-          A fullstack developer with a twist
+          A fullstack developer with a twistss
         </h1>
       </section>
       <section className="section2">
