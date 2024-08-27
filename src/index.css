@@ -10,35 +10,27 @@ body {
   overflow-x: hidden;
 }
 
-/* ======    Márgenes laterales responsivos   ====== */
-
-@media screen and (min-width: 768px) and (max-width: 1440px) {
-  .container {
-    margin-left: 112px;
-    margin-right: 112px;
-  }
+h1 {
+  color: rgb(3, 3, 3);
+  font-weight: 400; /* Reducimos el grosor de la letra */
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .container {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
+h3 {
+  font-size: 44px;
+  line-height: 120%;
 }
 
-@media (max-width: 480px) {
-  .container {
-    margin-left: 16px;
-    margin-right: 16px;
-  }
+h5{
+  margin: 0;
 }
-/* ======    Márgenes laterales responsivos   ====== */
+
+
 /* ======    Tamano de letra responsiva   ====== */
 
 @media screen and (min-width: 768px) and (max-width: 1440px) {
   p {
-    font-size: 20px !important;
-    line-height: 140% !important;
+    font-size: 15px !important;
+    line-height: 200% !important;
   }
 }
 
@@ -60,22 +52,54 @@ body {
     font-size: 14px !important;
     line-height: 100% !important;
   }
-  /* .container {
-    margin-left: 16px;
-    margin-right: 16px;
-  } */
 }
 
-/* .container {
-  background-color: rgb(176, 241, 173);
-} */
+/* ======    Tamano de letra responsiva   ====== */
+/* ======    Márgenes laterales responsivos   ====== */
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .container {
+    margin-left: 112px !important;
+    margin-right: 112px !important;
+    /* width: calc(100% - 224px) !important;  */
+  }
+  .containerLarge {
+   margin: 56px;
+    /* width: calc(100% - 112px) !important; */
+    padding: 56px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .containerLarge {
+    margin: 20px;
+
+    padding: 20px;
+   
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .containerLarge {
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+/* ======    Márgenes laterales responsivos   ====== */
+
 
 /* ============================    ESTILOS GENERALES   ========================== */
 /* ============================         NAVBAR         ========================== */
-
-/* .navbar {
-  margin-top: 45px;
-} */
 
 /* Estilos para el AppBar */
 .custom-app-bar {
@@ -186,14 +210,12 @@ body {
 /* ============================       NAVBAR      ========================== */
 /* ============================   Section HERO1   ========================== */
 
-.section1 {
-  /* background-color: rgba(84, 236, 84, 0.445); */
+.containerLarge {
+  background-color: #fca211c7;
+  border-radius: 40px;
 }
 
-h1 {
-  color: rgb(3, 3, 3);
-  font-weight: 400; /* Reducimos el grosor de la letra */
-}
+
 
 @media (min-width: 768px) {
   .h1Title {
@@ -203,7 +225,7 @@ h1 {
 
 /* Estilos para el título principal */
 .titulo-principal {
-  margin-top: 7rem;
+  margin-top: 4rem;
   font-size: 7vw; /* Tamaño de fuente responsivo */
   line-height: 1;
   word-wrap: break-word; /* Permite que las palabras se rompan si es necesario */
@@ -223,37 +245,22 @@ h1 {
   }
 }
 
-/* Aplicamos el margen superior a .section1 */
-/* .section1 {
-  margin-top: 152px;
-} */
-
-/* Mantenemos el mismo margen para pantallas más grandes */
-/* @media (min-width: 768px) {
-  .section1 {
-    margin-top: 40px;
-  }
-} */
-
 .changing-text {
   font-weight: 200;
 }
 /* ============================   Section HERO1 ========================== */
 /* ============================   Section HERO2 ========================== */
-/* 
-@media (min-width: 768px) {
-  .section2 {
-    margin-top: 10px;
-  }
-} */
 
 .section2 {
-  /* background-color: aqua; */
   width: 100%;
+  max-width: 1216px; /* 1440px - (112px * 2) */
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 350px);
   grid-template-areas: "container2-1 container2-2";
   gap: 16px;
+  
 }
 
 .container2-1 {
@@ -275,13 +282,6 @@ h1 {
   font-size: 20px;
   line-height: 140%;
 }
-
-/* @media screen and (min-width: 768px) and (max-width: 868px) {
-  .container2-1 p,
-  .container2-2 p {
-    font-size: 16px; 
-  }
-} */
 
 .container2-2 {
   /* background-color: rgb(166, 197, 26); */
@@ -359,7 +359,7 @@ h1 {
 /* ============================   Section ENCABEZADO PROJECTS ========================== */
 
 .section3 {
-  margin-top: 144px;
+  margin-top: 80px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -380,10 +380,6 @@ h1 {
   margin: 0;
 }
 
-.container3-2 h3 {
-  font-size: 48px;
-  line-height: 120%;
-}
 
 .container3-3 p {
   /* font-size: 20px !important; */
@@ -402,9 +398,16 @@ h1 {
   line-height: 110%;
 }
 
-.expertiseFlexItems h4 {
-  font-size: 32px;
+.projectsFlexItems h4 {
+  font-size: 22px;
   line-height: 130%;
+  min-height: 81px;
+  margin-bottom: 0;
+}
+.expertiseFlexItems h4 {
+  font-size: 22px;
+  line-height: 130%;
+  margin-bottom: 40px;
 }
 
 .expertiseFlexItems p {
@@ -427,9 +430,8 @@ h1 {
 
 .sectionProjects {
   margin-top: 2.5rem; /* 40/16 */
-  margin-bottom: 8.6875rem; /* 155px/16 */
+  margin-bottom: 105px; /* 155px/16 */
 }
-
 .column-container-s4 {
   display: flex;
   flex-wrap: wrap;
@@ -451,7 +453,7 @@ h1 {
 .column-s4 {
   width: calc(50% - 1rem);
   min-width: 115px;
-  margin-bottom: 2rem;
+  margin-bottom: 15px;
 
 }
 
@@ -467,7 +469,7 @@ h1 {
 
 .column-footer-s4 {
   height: auto; /* Cambia la altura fija a auto */
-  margin-top: 1rem;
+  margin-top: 3rem;
   /* background-color: aquamarine; */
 }
 
@@ -495,7 +497,7 @@ h1 {
 .ecpertiseFlexContainer {
   width: 100%;
   display: flex;
-  row-gap: 60px;
+  row-gap: 40px;
   column-gap: 2rem;
   /* background-color: darkgoldenrod; */
   margin-bottom: 8rem;
@@ -509,6 +511,10 @@ h1 {
   height: fit-content;
   /* background-color: antiquewhite; */
 }
+.expertiseFlexItems h5 h4{
+   
+  background-color: grey !important;
+}
 
 @media (max-width: 480px) {
   .ecpertiseFlexContainer {
@@ -519,6 +525,11 @@ h1 {
     width: 100%;
     max-width: 400px;
   }
+
+  /* .section5 h4{
+   min-height: 100%;
+   margin: 0 !important;
+  } */
 }
 
 /* ============================    Section EXPERTISE    ========================== */

@@ -36,7 +36,7 @@ function Home() {
 
   const [displayedWord, setDisplayedWord] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const words = [" a twist", " an approach"];
+  const words = [" a twist", " designing view"];
   const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
@@ -68,35 +68,36 @@ function Home() {
   console.log(techIcons);
   return (
     <>
-      <div className="container">
-        <section className="section1">
+      <div className="">
+        <section className="section1 containerLarge">
           <div className="h1Title">
             <h1 className="titulo-principal">
               A fullstack developer with{" "}
               <span className="changing-text">{displayedWord}</span>
             </h1>
           </div>
-        </section>
-        <section className="section2">
-          <div className="container2-1">
-            <h5>Let's Talk</h5>
-            <p>
-              <a href="mailto:sebastian.pradomelesi@gmail.com">
-                sebastian.pradomelesi@gmail.com
-              </a>
-            </p>
+
+          <div className="section2">
+            <div className="container2-1">
+              <h5>Let's Talk</h5>
+              <p>
+                <a href="mailto:sebastian.pradomelesi@gmail.com">
+                  sebastian.pradomelesi@gmail.com
+                </a>
+              </p>
+            </div>
+            <div className="container2-2">
+              <p>
+                Hello, I'm Sebastian, a fullstack developer focusing in React,
+                NodeJs and WordPress. Closely related to designers, I will bring
+                your idea into reality.
+              </p>
+            </div>
           </div>
-          <div className="container2-2">
-            <p>
-              Hello, I'm Sebastian, a fullstack developer focusing in React,
-              NodeJs and WordPress. Closely related to designers, I will bring
-              your idea into reality.
-            </p>
-          </div>
         </section>
-        <section className="section3">
+        <section className="section3 container">
           <div className="container3-1">
-            <div className="container3-2">
+            <div className="titleH3">
               <h3>Projects</h3>
             </div>
             <div className="container3-3">
@@ -109,7 +110,7 @@ function Home() {
             </p>
           </div>
         </section>
-        <section className="sectionProjects">
+        <section className="sectionProjects container">
           <div className="column-container-s4">
             <div className="column-s4">
               <div className="column-content-s4">
@@ -120,7 +121,11 @@ function Home() {
                 />
               </div>
               <div className="column-footer-s4">
-                <h3>Equalvision e-commerce</h3>
+                <div className="projectsFlexItems">
+                  {" "}
+                  <h4>Equalvision e-commerce</h4>
+                </div>
+
                 <h5>Web development</h5>
 
                 <p>
@@ -135,8 +140,11 @@ function Home() {
                 <img className="imageProject" src={alusur} alt="alsur" />
               </div>
               <div className="column-footer-s4">
-                <h3>Alusur SA</h3>
-                <h5>Web development</h5>
+              <div className="projectsFlexItems">
+                  {" "}
+                  <h4>Alusur sa</h4>
+                  <h5>Web development</h5>
+                </div>
                 <p>
                   Company dedicated to the efficient distribution and logistics
                   of aluminum architectural systems, profiles, and glass.This
@@ -153,8 +161,11 @@ function Home() {
                 />
               </div>
               <div className="column-footer-s4">
-                <h3>Backend e-commerce</h3>
-                <h5>Web development</h5>
+              <div className="projectsFlexItems">
+                  {" "}
+                  <h4>Backend e-commerce</h4>
+                  <h5>Web development</h5>
+                </div>
                 <p>
                   E-commerce dashboard site section for managing the site, built
                   with React-Redux. . The backend API is a RESTful service built
@@ -167,7 +178,11 @@ function Home() {
                 <img className="imageProject" src={movie} alt=" movie" />
               </div>
               <div className="column-footer-s4">
-                <h3>Fakeflix</h3>
+              <div className="projectsFlexItems">
+                  {" "}
+                  <h4>Fakeflix</h4>
+                  
+                </div>
                 <h5>Desktop app </h5>
 
                 <p>
@@ -182,8 +197,10 @@ function Home() {
             </div>
           </div>
         </section>
-        <section className="section5">
-          <h2 className="expertise-title">Expertise</h2>
+        <section className="section5 container">
+          <div className="titleH3">
+            <h3>Expertise</h3>
+          </div>
           <div className="ecpertiseFlexContainer">
             <div className="expertiseFlexItems">
               <h4>
@@ -253,7 +270,7 @@ function Home() {
             </div>
           </div>
         </section>
-        <section className="section-testimonials">
+        {/* <section className="section-testimonials container">
           <h3>Testimonials</h3>
           <div className="testimonialsFlexContainer">
             <div className="testimonialsFlexItems testimonial-content">
@@ -273,8 +290,8 @@ function Home() {
               </div>
             </div>
           </div>
-        </section>
-        <section className="section-lets-talk">
+        </section> */}
+        <section className="section-lets-talk container">
           <div className="lets-talk-flexContainer">
             <div className="lets-talk-flexItem">
               <h2>Let's talk!</h2>
