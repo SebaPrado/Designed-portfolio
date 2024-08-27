@@ -68,6 +68,11 @@ h5{
     /* width: calc(100% - 112px) !important; */
     padding: 56px;
   }
+  
+  .navbarContainerLarge{
+    margin-left: 56px;
+    margin-right: 56px;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -77,9 +82,13 @@ h5{
   }
   .containerLarge {
     margin: 20px;
-
     padding: 20px;
    
+  }
+  
+  .navbarContainerLarge{
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }
 
@@ -94,8 +103,18 @@ h5{
     padding-left: 8px;
     padding-right: 8px;
   }
+  .navbarContainerLarge{
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 }
 /* ======    Márgenes laterales responsivos   ====== */
+
+
+.navbarContainerLarge {
+  position: relative;
+  /* background-color: aquamarine; */
+}
 
 
 /* ============================    ESTILOS GENERALES   ========================== */
@@ -106,6 +125,20 @@ h5{
   width: 100%;
   max-width: 440px;
   height: 62px;
+}
+
+.navbarContainerLarge::before {
+  content: '';
+  width: 7%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('/logoseba.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 /* Estilos para el contenedor de botones */
@@ -494,13 +527,23 @@ h5{
 /* ============================    Section PROJECTS     ========================== */
 /* ============================    Section EXPERTISE    ========================== */
 
+.section5 {
+  background-color: black;
+  color: white;
+  padding: 56px
+  
+}
+
+.section5 .titleH3 h3 {
+  color: white;
+}
+
 .ecpertiseFlexContainer {
   width: 100%;
   display: flex;
   row-gap: 40px;
   column-gap: 2rem;
-  /* background-color: darkgoldenrod; */
-  margin-bottom: 8rem;
+  margin-bottom: 3rem;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -509,11 +552,18 @@ h5{
   width: 46%;
   max-width: 442px;
   height: fit-content;
-  /* background-color: antiquewhite; */
 }
-.expertiseFlexItems h5 h4{
-   
-  background-color: grey !important;
+
+.expertiseFlexItems h4 {
+  color: white;
+}
+
+.expertiseFlexItems p {
+  color: white;
+}
+
+.dot {
+  background-color: white;
 }
 
 @media (max-width: 480px) {
@@ -525,11 +575,6 @@ h5{
     width: 100%;
     max-width: 400px;
   }
-
-  /* .section5 h4{
-   min-height: 100%;
-   margin: 0 !important;
-  } */
 }
 
 /* ============================    Section EXPERTISE    ========================== */
@@ -749,6 +794,25 @@ h5{
   margin: 10px;
   border: 3px solid grey;
   background-color: aquamarine;
+}
+
+.project-container {
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+  transform: scale(1.07);
+  display: inline-block;
+}
+
+.project-container:hover {
+  transform: scale(1.07);
 }
 
 .flexbox-item1 {

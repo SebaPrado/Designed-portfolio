@@ -34,43 +34,42 @@ function Navbar() {
 
   return (
     <>  
-     <div className='container'>    
-      <ThemeProvider theme={theme}>
-      <Box className="main-container">
-        <AppBar position="static" className="custom-app-bar" sx={{ backgroundColor: 'black' }}>
-          <Toolbar className="custom-toolbar">
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2, display: { sm: 'none' }, color: 'white' }}
-              onClick={toggleDrawer(true)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Box className="button-container">
+      <div className='navbarContainerLarge'>    
+        <ThemeProvider theme={theme}>
+          <Box className="main-container">
+            <AppBar position="static" className="custom-app-bar" sx={{ backgroundColor: 'black' }}>
+              <Toolbar className="custom-toolbar">
+                <IconButton
+                  edge="start"
+                  color="inherit"
+                  aria-label="menu"
+                  sx={{ mr: 2, display: { sm: 'none' }, color: 'white' }}
+                  onClick={toggleDrawer(true)}
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Box className="button-container">
+                  {menuItems.map((item) => (
+                    <Button key={item.label} className="custom-button" sx={{ color: 'white' }} onClick={item.onClick}>
+                      {item.label}
+                    </Button>
+                  ))}
+                </Box>
+              </Toolbar>
+            </AppBar>
+          </Box>
+          <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+            <List>
               {menuItems.map((item) => (
-                <Button key={item.label} className="custom-button" sx={{ color: 'white' }} onClick={item.onClick}>
-                  {item.label}
-                </Button>
+                <ListItem button key={item.label} onClick={toggleDrawer(false)}>
+                  <ListItemText primary={item.label} />
+                </ListItem>
               ))}
-            </Box>
-          </Toolbar>
-        </AppBar>
-      </Box>
-      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
-        <List>
-          {menuItems.map((item) => (
-            <ListItem button key={item.label} onClick={toggleDrawer(false)}>
-              <ListItemText primary={item.label} />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-    </ThemeProvider>
-    </div>
+            </List>
+          </Drawer>
+        </ThemeProvider>
+      </div>
     </>
-
   );
 }
 

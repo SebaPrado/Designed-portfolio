@@ -95,6 +95,9 @@ function Home() {
             </div>
           </div>
         </section>
+
+  {/* ==========================      PROJECTS         =====================  */}
+
         <section className="section3 container">
           <div className="container3-1">
             <div className="titleH3">
@@ -111,19 +114,27 @@ function Home() {
           </div>
         </section>
         <section className="sectionProjects container">
+
+          {/* ================   Proyect 1   ==================== */}
+
           <div className="column-container-s4">
             <div className="column-s4">
-              <div className="column-content-s4">
-                <img
-                  className=" imageProject "
-                  src={equalvision}
-                  alt=" equalvision"
-                />
+              <div className="column-content-s4 project-container">
+                <a href="https://equalvision.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <img
+                    className="imageProject"
+                    src={equalvision}
+                    alt="equalvision"
+                  />
+                </a>
               </div>
               <div className="column-footer-s4">
                 <div className="projectsFlexItems">
-                  {" "}
-                  <h4>Equalvision e-commerce</h4>
+                  <h4>
+                    <a href="https://equalvision.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link">
+                      Equalvision e-commerce
+                    </a>
+                  </h4>
                 </div>
 
                 <h5>Web development</h5>
@@ -135,14 +146,23 @@ function Home() {
                 </p>
               </div>
             </div>
+
+          {/* ================   Proyect 1   ==================== */}
+          {/* ================   Proyect 2   ==================== */}
+
             <div className="column-s4">
-              <div className="column-content-s4">
-                <img className="imageProject" src={alusur} alt="alsur" />
+              <div className="column-content-s4 project-container">
+                <a href="https://alusur.com" target="_blank" rel="noopener noreferrer">
+                  <img className="imageProject" src={alusur} alt="alsur" />
+                </a>
               </div>
               <div className="column-footer-s4">
               <div className="projectsFlexItems">
-                  {" "}
-                  <h4>Alusur sa</h4>
+                  <h4>
+                    <a href="https://alusur.com" target="_blank" rel="noopener noreferrer" className="project-link">
+                      Alusur sa
+                    </a>
+                  </h4>
                   <h5>Web development</h5>
                 </div>
                 <p>
@@ -152,18 +172,27 @@ function Home() {
                 </p>
               </div>
             </div>
+
+          {/* ================   Proyect 2   ==================== */}
+          {/* ================   Proyect 3  ==================== */}
+
             <div className="column-s4">
-              <div className="column-content-s4">
-                <img
-                  className="imageProject"
-                  src={dashboard}
-                  alt=" dashboard"
-                />
+              <div className="column-content-s4 project-container">
+                <a href="https://equalvision-admin.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <img
+                    className="imageProject"
+                    src={dashboard}
+                    alt=" dashboard"
+                  />
+                </a>
               </div>
               <div className="column-footer-s4">
               <div className="projectsFlexItems">
-                  {" "}
-                  <h4>Backend e-commerce</h4>
+                  <h4>
+                    <a href="https://equalvision-admin.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link">
+                      Backend e-commerce
+                    </a>
+                  </h4>
                   <h5>Web development</h5>
                 </div>
                 <p>
@@ -173,14 +202,23 @@ function Home() {
                 </p>
               </div>
             </div>
+
+          {/* ================   Proyect 3  ==================== */}
+          {/* ================   Proyect 4  ==================== */}
+
             <div className="column-s4">
-              <div className="column-content-s4">
-                <img className="imageProject" src={movie} alt=" movie" />
+              <div className="column-content-s4 project-container">
+                <a href="https://fakeflix-ruby.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <img className="imageProject" src={movie} alt=" movie" />
+                </a>
               </div>
               <div className="column-footer-s4">
               <div className="projectsFlexItems">
-                  {" "}
-                  <h4>Fakeflix</h4>
+                  <h4>
+                    <a href="https://fakeflix-ruby.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link">
+                      Fakeflix
+                    </a>
+                  </h4>
                   
                 </div>
                 <h5>Desktop app </h5>
@@ -195,9 +233,14 @@ function Home() {
                 </p>
               </div>
             </div>
+          {/* ================   Proyect 4  ==================== */}
+
           </div>
         </section>
-        <section className="section5 container">
+  {/* ==========================      PROJECTS         =====================  */}
+  {/* ==========================      EXPERTISE         =====================  */}
+
+        <section className="section5 containerLarge">
           <div className="titleH3">
             <h3>Expertise</h3>
           </div>
