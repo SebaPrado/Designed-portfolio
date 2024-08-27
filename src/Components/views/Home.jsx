@@ -3,6 +3,7 @@ import equalvision from "../../../public/equalFront.jpeg";
 import alusur from "../../../public/alusur.jpeg";
 import movie from "../../../public/fakeflix.jpeg";
 import dashboard from "../../../public/equalAdmin.jpeg";
+import matesito from "../../../public/matesito.png";
 
 import {
   FaHtml5,
@@ -39,7 +40,7 @@ function Home() {
 
   const [displayedWord, setDisplayedWord] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const words = [" a twist", " designing view"];
+  const words = [" a twist", " designing mind"];
   const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
@@ -47,26 +48,32 @@ function Home() {
 
     const typeEffect = () => {
       const currentWord = words[wordIndex];
-      const shouldDelete = isDeleting ? 1 : -1;
-
-      setDisplayedWord((prev) =>
-        currentWord.substring(0, prev.length - shouldDelete)
-      );
-
-      if (!isDeleting && displayedWord === currentWord) {
-        setTimeout(() => setIsDeleting(true), 1000);
-      } else if (isDeleting && displayedWord === "") {
-        setIsDeleting(false);
-        setWordIndex((prev) => (prev + 1) % words.length);
+      
+      if (!isDeleting) {
+        if (displayedWord.length < currentWord.length) {
+          setDisplayedWord(currentWord.slice(0, displayedWord.length + 1));
+          timer = setTimeout(typeEffect, 250);
+        } else {
+          // Palabra completa, espera 4 segundos antes de borrar
+          timer = setTimeout(() => setIsDeleting(true), 4000);
+        }
+      } else {
+        if (displayedWord.length > 0) {
+          setDisplayedWord(currentWord.slice(0, displayedWord.length - 1));
+          timer = setTimeout(typeEffect, 50);
+        } else {
+          // Palabra borrada, cambia a la siguiente palabra
+          setIsDeleting(false);
+          setWordIndex((prev) => (prev + 1) % words.length);
+          timer = setTimeout(typeEffect, 250);
+        }
       }
-
-      timer = setTimeout(typeEffect, isDeleting ? 50 : 250);
     };
 
     timer = setTimeout(typeEffect, 100);
 
     return () => clearTimeout(timer);
-  }, [displayedWord, isDeleting, wordIndex]);
+  }, [displayedWord, isDeleting, wordIndex, words]);
 
   console.log(techIcons);
   return (
@@ -250,7 +257,7 @@ function Home() {
           <div className="ecpertiseFlexContainer">
             <div className="expertiseFlexItems">
               <h4>
-                <span className="dot"></span>Branding
+                <span className="dot"></span>Fullstack developer
               </h4>
               <p>
                 Collaborating closely, we'll develop an impactful brand identity
@@ -262,7 +269,7 @@ function Home() {
 
             <div className="expertiseFlexItems">
               <h4>
-                <span className="dot"></span>Development
+                <span className="dot"></span>Web developer
               </h4>
               <p>
                 I create user-friendly, adaptive, engaging websites. No
@@ -274,7 +281,7 @@ function Home() {
 
             <div className="expertiseFlexItems">
               <h4>
-                <span className="dot"></span>UI design
+                <span className="dot"></span>Wordpress / PHP
               </h4>
               <p>
                 I create efficient, adaptable, and engaging websites. No
@@ -286,7 +293,17 @@ function Home() {
 
             <div className="expertiseFlexItems">
               <h4>
-                <span className="dot"></span>UX design
+                Mate drinker 
+                <img 
+                  src={matesito} 
+                  alt="Mate" 
+                  style={{ 
+                    width: '28.8px', 
+                    height: '28.8px', 
+                    marginLeft: '8px', 
+                    verticalAlign: 'middle' 
+                  }} 
+                />
               </h4>
               <p>
                 I comprehend and resolve digital product issues using a
