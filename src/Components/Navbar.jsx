@@ -41,9 +41,9 @@ function Navbar() {
 
   return (
     <>  
-      <div className='navbarContainerLarge'>    
+      <div className=''>    
         <ThemeProvider theme={theme}>
-          <Box className="main-container">
+          <Box className="main-container sticky">
             <AppBar position="static" className="custom-app-bar" sx={{ backgroundColor: 'black' }}>
               <Toolbar className="custom-toolbar">
                 <IconButton
