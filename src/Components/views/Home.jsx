@@ -11,9 +11,12 @@ import {
   FaNodeJs,
   FaBootstrap,
   FaGitAlt,
-  FaGithub,
+  
   FaFigma,
   FaArrowRight,
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiRedux, SiInsomnia } from "react-icons/si";
@@ -350,6 +353,24 @@ function Home() {
           </div>
         </section>
       </div>
+
+      {/* Nuevo footer */}
+      <footer className="footer">
+        <div className="footer-content">
+          <p>&copy; 2024 Sebastian Prado. All rights reserved.</p>
+          <div className="social-icons">
+            <a href="https://github.com/SebaPrado" target="_blank" rel="noopener noreferrer">
+              <FaGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/sebastian-prado-b05862281/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+            </a>
+            <a href="https://www.instagram.com/sebastian_prado31/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

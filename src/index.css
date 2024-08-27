@@ -524,6 +524,25 @@ h5{
 .imageProject{
   height: 28rem;
 }
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+  transform: scale(1.07);
+  display: inline-block;
+}
+
+.project-container:hover {
+  transform: scale(1.07);
+}
+
+.project-container {
+  transition: transform 0.3s ease-in-out;
+}
 /* ============================    Section PROJECTS     ========================== */
 /* ============================    Section EXPERTISE    ========================== */
 
@@ -766,6 +785,41 @@ h5{
   align-items: center;
   justify-content: space-around;
 }
+
+
+
+/* ==================        footer     ================================== */
+.footer {
+  background-color: #FF8C00 !important;
+  color: black !important;
+  padding: 20px 0 !important;
+  display: block !important; /* Asegura que el footer se muestre */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: black;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+
 /* ============================    SLIDER    ========================== */
 /* ============================   Flexbox ========================== */
 
@@ -794,25 +848,6 @@ h5{
   margin: 10px;
   border: 3px solid grey;
   background-color: aquamarine;
-}
-
-.project-container {
-  transition: transform 0.3s ease-in-out;
-}
-
-.project-link {
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease;
-}
-
-.project-link:hover {
-  transform: scale(1.07);
-  display: inline-block;
-}
-
-.project-container:hover {
-  transform: scale(1.07);
 }
 
 .flexbox-item1 {
