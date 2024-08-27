@@ -25,10 +25,17 @@ function Navbar() {
     window.open(resumePDF, '_blank');
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const menuItems = [
-    { label: 'Home', onClick: () => {} },
-    { label: 'Projects', onClick: () => {} },
-    { label: 'About', onClick: () => {} },
+    { label: 'Home', onClick: () => scrollToSection('home') },
+    { label: 'Projects', onClick: () => scrollToSection('projects') },
+    { label: 'Expertise', onClick: () => scrollToSection('expertise') },
     { label: 'Resume', onClick: handleResumeClick },
   ];
 

@@ -78,7 +78,7 @@ function Home() {
   console.log(techIcons);
   return (
     <>
-      <div className="">
+      <div className="" id="home">
         <section className="section1 containerLarge">
           <div className="h1Title">
             <h1 className="titulo-principal">
@@ -108,7 +108,7 @@ function Home() {
 
   {/* ==========================      PROJECTS         =====================  */}
 
-        <section className="section3 container">
+        <section className="section3 container" id="projects">
           <div className="container3-1">
             <div className="titleH3">
               <h3>Projects</h3>
@@ -250,7 +250,7 @@ function Home() {
   {/* ==========================      PROJECTS         =====================  */}
   {/* ==========================      EXPERTISE         =====================  */}
 
-        <section className="section5 containerLarge">
+        <section className="section5 containerLarge" id="expertise">
           <div className="titleH3">
             <h3>Expertise</h3>
           </div>
