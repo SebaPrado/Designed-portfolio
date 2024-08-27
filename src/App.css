@@ -1,6 +1,6 @@
-h1 {
-  color: blue;
-}
+/* #root{
+  background-color: rgba(178, 189, 236, 0.644);
+} */
 
 /* Estilos para el AppBar */
 .custom-app-bar {
@@ -38,7 +38,7 @@ h1 {
 }
 
 .custom-button:hover {
-  background-color: white;
+  background-color: #050505;
   color: black;
 }
 
