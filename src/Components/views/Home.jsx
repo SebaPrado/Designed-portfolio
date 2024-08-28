@@ -12,7 +12,6 @@ import {
   FaNodeJs,
   FaBootstrap,
   FaGitAlt,
-  
   FaFigma,
   FaArrowRight,
   FaGithub,
@@ -48,7 +47,7 @@ function Home() {
 
     const typeEffect = () => {
       const currentWord = words[wordIndex];
-      
+
       if (!isDeleting) {
         if (displayedWord.length < currentWord.length) {
           setDisplayedWord(currentWord.slice(0, displayedWord.length + 1));
@@ -106,7 +105,7 @@ function Home() {
           </div>
         </section>
 
-  {/* ==========================      PROJECTS         =====================  */}
+        {/* ==========================      PROJECTS         =====================  */}
 
         <section className="section3 container" id="projects">
           <div className="container3-1">
@@ -124,13 +123,19 @@ function Home() {
           </div>
         </section>
         <section className="sectionProjects container">
-
           {/* ================   Proyect 1   ==================== */}
 
           <div className="column-container-s4">
-            <div className="column-s4">
+            <div
+              className="singleProyectContainer
+"
+            >
               <div className="column-content-s4 project-container">
-                <a href="https://equalvision.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://equalvision.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     className="imageProject"
                     src={equalvision}
@@ -141,7 +146,12 @@ function Home() {
               <div className="column-footer-s4">
                 <div className="projectsFlexItems">
                   <h4>
-                    <a href="https://equalvision.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link">
+                    <a
+                      href="https://equalvision.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
                       Equalvision e-commerce
                     </a>
                   </h4>
@@ -157,19 +167,31 @@ function Home() {
               </div>
             </div>
 
-          {/* ================   Proyect 1   ==================== */}
-          {/* ================   Proyect 2   ==================== */}
+            {/* ================   Proyect 1   ==================== */}
+            {/* ================   Proyect 2   ==================== */}
 
-            <div className="column-s4">
+            <div
+              className="singleProyectContainer
+"
+            >
               <div className="column-content-s4 project-container">
-                <a href="https://alusur.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://alusur.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img className="imageProject" src={alusur} alt="alsur" />
                 </a>
               </div>
               <div className="column-footer-s4">
-              <div className="projectsFlexItems">
+                <div className="projectsFlexItems">
                   <h4>
-                    <a href="https://alusur.com" target="_blank" rel="noopener noreferrer" className="project-link">
+                    <a
+                      href="https://alusur.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
                       Alusur sa
                     </a>
                   </h4>
@@ -183,12 +205,18 @@ function Home() {
               </div>
             </div>
 
-          {/* ================   Proyect 2   ==================== */}
-          {/* ================   Proyect 3  ==================== */}
+            {/* ================   Proyect 2   ==================== */}
+            {/* ================   Proyect 3  ==================== */}
 
-            <div className="column-s4">
+            <div
+              className="singleProyectContainer"
+            >
               <div className="column-content-s4 project-container">
-                <a href="https://equalvision-admin.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://equalvision-admin.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     className="imageProject"
                     src={dashboard}
@@ -197,9 +225,14 @@ function Home() {
                 </a>
               </div>
               <div className="column-footer-s4">
-              <div className="projectsFlexItems">
+                <div className="projectsFlexItems">
                   <h4>
-                    <a href="https://equalvision-admin.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link">
+                    <a
+                      href="https://equalvision-admin.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
                       Backend e-commerce
                     </a>
                   </h4>
@@ -213,23 +246,34 @@ function Home() {
               </div>
             </div>
 
-          {/* ================   Proyect 3  ==================== */}
-          {/* ================   Proyect 4  ==================== */}
+            {/* ================   Proyect 3  ==================== */}
+            {/* ================   Proyect 4  ==================== */}
 
-            <div className="column-s4">
+            <div
+              className="singleProyectContainer
+"
+            >
               <div className="column-content-s4 project-container">
-                <a href="https://fakeflix-ruby.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://fakeflix-ruby.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img className="imageProject" src={movie} alt=" movie" />
                 </a>
               </div>
               <div className="column-footer-s4">
-              <div className="projectsFlexItems">
+                <div className="projectsFlexItems">
                   <h4>
-                    <a href="https://fakeflix-ruby.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link">
+                    <a
+                      href="https://fakeflix-ruby.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
                       Fakeflix
                     </a>
                   </h4>
-                  
                 </div>
                 <h5>Desktop app </h5>
 
@@ -243,12 +287,11 @@ function Home() {
                 </p>
               </div>
             </div>
-          {/* ================   Proyect 4  ==================== */}
-
+            {/* ================   Proyect 4  ==================== */}
           </div>
         </section>
-  {/* ==========================      PROJECTS         =====================  */}
-  {/* ==========================      EXPERTISE         =====================  */}
+        {/* ==========================      PROJECTS         =====================  */}
+        {/* ==========================      EXPERTISE         =====================  */}
 
         <section className="section5 containerLarge" id="expertise">
           <div className="titleH3">
@@ -293,16 +336,16 @@ function Home() {
 
             <div className="expertiseFlexItems">
               <h4>
-                Mate drinker 
-                <img 
-                  src={matesito} 
-                  alt="Mate" 
-                  style={{ 
-                    width: '28.8px', 
-                    height: '28.8px', 
-                    marginLeft: '8px', 
-                    verticalAlign: 'middle' 
-                  }} 
+                Mate drinker
+                <img
+                  src={matesito}
+                  alt="Mate"
+                  style={{
+                    width: "28.8px",
+                    height: "28.8px",
+                    marginLeft: "8px",
+                    verticalAlign: "middle",
+                  }}
                 />
               </h4>
               <p>
@@ -376,13 +419,25 @@ function Home() {
         <div className="footer-content">
           <p>&copy; 2024 Sebastian Prado. All rights reserved.</p>
           <div className="social-icons">
-            <a href="https://github.com/SebaPrado" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/SebaPrado"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub />
             </a>
-            <a href="https://www.linkedin.com/in/sebastian-prado-b05862281/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/sebastian-prado-b05862281/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin />
             </a>
-            <a href="https://www.instagram.com/sebastian_prado31/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/sebastian_prado31/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram />
             </a>
           </div>
