@@ -39,7 +39,7 @@ function Home() {
 
   const [displayedWord, setDisplayedWord] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const words = [" a twist", " designing mind"];
+  const words = [" a twist", " a design view"];
   const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
