@@ -50,12 +50,23 @@ function Navbar() {
                   edge="start"
                   color="inherit"
                   aria-label="menu"
-                  sx={{ mr: 5, mt: 5, display: { md: 'none' }, color: 'black' }}
+                  sx={{
+                    mr: 3,
+                    mt: 1,
+                    display: { xs: 'block', sm: 'none', md: 'none' },
+                    color: 'white',
+                    backgroundColor: 'black',
+                    borderRadius: '30%',
+                    padding: '8px',
+                    '&:hover': {
+                      backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    },
+                  }}
                   onClick={toggleDrawer(true)}
                 >
                   <MenuIcon />
                 </IconButton>
-                <Box className="button-container">
+                <Box className="button-container" sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' } }}>
                   {menuItems.map((item) => (
                     <Button key={item.label} className="custom-button" sx={{ color: 'white' }} onClick={item.onClick}>
                       {item.label}
