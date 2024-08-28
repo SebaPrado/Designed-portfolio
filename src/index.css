@@ -1,3 +1,6 @@
+
+
+
 /* ============================    ESTILOS GENERALES   ========================== */
 
 /* Estilos base */
@@ -303,18 +306,37 @@ h5 {
   border-radius: 40px;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .containerLarge {
     min-height: 15rem;
   }
-}
-@media (min-width: 300px) and (max-width: 768px) {
+} */
+@media (min-width: 300px) and (max-width: 600px) {
   .containerLarge {
     padding-bottom: 10px;
     padding-top: 10px;
+    
+  }
+  .container2-1{
+    margin-bottom: 2.5rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .containerLarge {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    min-height: 35rem;
+  }
+  .containerLarge h1 {
+    margin-top: 8rem;
   }
 }
 
+@media (min-width: 1300px) {
+  .h1Title {
+    min-height: 18rem !important;
+  }
+}
 @media (min-width: 768px) {
   .h1Title {
     min-height: 15rem;
@@ -396,6 +418,7 @@ h5 {
 .container2-2 p {
   word-break: break-word;
   overflow-wrap: break-word;
+  text-align: justify;
 }
 
 @media screen and (max-width: 768px) {
@@ -440,12 +463,11 @@ h5 {
 }
 
 /* Ajustes responsivos para el texto en container2-2 */
-@media screen and (max-width: 1024px) {
+@media (min-width:769px) and (max-width: 1024px) {
   .container2-2 p {
     font-size: 18px;
   }
 }
-
 @media screen and (max-width: 768px) {
   .container2-2 p {
     font-size: 16px;
@@ -458,16 +480,42 @@ h5 {
   }
 }
 
+
 /* ============================   Section HERO2 ========================== */
 
 /* ============================   Section ENCABEZADO PROJECTS ========================== */
 
 .section3 {
-  margin-top: 80px;
+  
   /* width: 100%; */
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+@media (min-width:769px) and (max-width: 1024px) {
+  .section3{
+    margin-top: 80px;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+ .section3{
+  margin-top: 45px;
+    
+  }
+  .sectionProjects{
+    margin-top: 0 !important;
+    
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section3{
+    margin-top: 0;
+
+    
+  }
 }
 
 .container3-1 {
@@ -884,6 +932,9 @@ h5 {
 }
 
 /* ==================        footer     ================================== */
+
+
+
 .footer {
   background-color: #ff8c00 !important;
   color: black !important;
@@ -897,6 +948,30 @@ h5 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .footer {
+    padding-left :  12px !important;
+    padding-right : 12px !important;
+  }
+  
+}
+
+/* Mediana: 768px a 375px */
+@media screen and (min-width: 450px) and (max-width: 767px) {
+  .footer {
+    padding-left :  12px !important;
+    padding-right : 12px !important;
+  }
+}
+
+/* Chica: menor a 375px */
+@media screen and (max-width: 450px) {
+  .footer {
+    padding-right: 12px !important;
+    padding-left :  12px !important;
+  }
 }
 
 .social-icons {
@@ -915,6 +990,26 @@ h5 {
 }
 
 /* ============================    SLIDER    ========================== */
+
+/* ============================    FRAMES PARA OTROS TRABAJOS    ========================== */
+/* ============================    FRAMES PARA OTROS TRABAJOS    ========================== */
+/* ============================    FRAMES PARA OTROS TRABAJOS    ========================== */
+
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  
+}
+
+/* Mediana: 768px a 375px */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+
+}
+
+/* Chica: menor a 375px */
+@media screen and (max-width: 374px) {
+ 
+}
+
 /* ============================   Flexbox ========================== */
 
 /* Un resumen :  

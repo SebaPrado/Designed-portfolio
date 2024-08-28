@@ -89,8 +89,11 @@ function Home() {
           <div className="section2">
             <div className="container2-1">
               <h5>Let's Talk</h5>
-              <p >
-                <a className="mail" href="mailto:sebastian.pradomelesi@gmail.com">
+              <p>
+                <a
+                  className="mail"
+                  href="mailto:sebastian.pradomelesi@gmail.com"
+                >
                   sebastian.pradomelesi@gmail.com
                 </a>
               </p>
@@ -208,9 +211,7 @@ function Home() {
             {/* ================   Proyect 2   ==================== */}
             {/* ================   Proyect 3  ==================== */}
 
-            <div
-              className="singleProyectContainer"
-            >
+            <div className="singleProyectContainer">
               <div className="column-content-s4 project-container">
                 <a
                   href="https://equalvision-admin.vercel.app/"
@@ -303,10 +304,10 @@ function Home() {
                 <span className="dot"></span>Fullstack developer
               </h4>
               <p>
-                Collaborating closely, we'll develop an impactful brand identity
-                for your emerging enterprise. The full spectrum of brand
-                analysis and design is addressed, culminating in a visually
-                stunning, evergreen logo concept.
+                Looking for a developer who can handle it all? I’ve got you
+                covered. From front to back, I’ll build a seamless experience
+                that aligns with your brand. Let’s take your business to the
+                next level with a strong, cohesive digital presence
               </p>
             </div>
 
@@ -315,10 +316,10 @@ function Home() {
                 <span className="dot"></span>Web developer
               </h4>
               <p>
-                I create user-friendly, adaptive, engaging websites. No
-                cookie-cutters. No cumbersome, complex coding. Webflow forms the
-                foundation of my web development approach. I employ it to
-                produce safe, top-notch personalized websites.
+                Your website deserves to stand out. I craft responsive,
+                user-friendly sites that capture your brand’s essence without
+                the hassle of complex code. With Webflow at the core, you’ll get
+                a secure, custom site that’s as unique as your business.
               </p>
             </div>
 
@@ -327,10 +328,10 @@ function Home() {
                 <span className="dot"></span>Wordpress / PHP
               </h4>
               <p>
-                I create efficient, adaptable, and engaging websites. No
-                predefined patterns. No sluggish, complex code. Webflow forms
-                the foundation of my web development approach. I employ it to
-                provide safe, top-notch bespoke websites.
+                Need a site that’s both powerful and flexible? I create custom
+                WordPress and PHP solutions that fit your needs perfectly. No
+                bloated code or generic templates—just a sleek, efficient
+                website tailored to your goals.
               </p>
             </div>
 
@@ -349,10 +350,10 @@ function Home() {
                 />
               </h4>
               <p>
-                I comprehend and resolve digital product issues using a
-                user-focused methodology. Investigation, compassion, and visual
-                conveyance are a few techniques I apply to captivate and involve
-                your users while fulfilling your business requirements.
+                Powered by mate—the South American drink that keeps me awake and
+                sharp—I’m always ready to deliver results on time.
+                Consider it my antioxidant secret weapon for staying focused and
+                ensuring your project is finished right on schedule.
               </p>
             </div>
           </div>
@@ -415,7 +416,7 @@ function Home() {
       </div>
 
       {/* Nuevo footer */}
-      <footer className="footer">
+      <footer className="footer ">
         <div className="footer-content">
           <p>&copy; 2024 Sebastian Prado. All rights reserved.</p>
           <div className="social-icons">
