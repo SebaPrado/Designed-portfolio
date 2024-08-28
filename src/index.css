@@ -153,19 +153,6 @@ h5 {
   height: 62px;
 }
 
-/* .navbarContainerLarge::before {
-  content: "";
-  width: 7%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("/logoseba.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 2;
-} */
 
 /* Estilos para el contenedor de botones */
 .button-container {
@@ -182,7 +169,7 @@ h5 {
   border-radius: 9999px !important;
   padding: 2px 16px !important;
   height: calc(100% - 12px) !important;
-  color: white !important;
+  color: white ;
   font-family: "Montserrat", sans-serif !important;
 }
 
@@ -198,20 +185,26 @@ h5 {
   padding-top: 20px;
   padding-bottom: 20px;
   width: 100%;
-  /* background-color: rgba(255, 255, 255, 1); Cambiamos a opacidad 1 por defecto */
-  transition: background-color 0.3s ease; /* Agregamos una transición suave */
-}
-
-.main-container.scrolled {
-  background-color: rgba(255, 255, 255, 0.322); /* Clase para cuando se ha hecho scroll */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+  transition: background-color 0.3s ease;
 }
 
 /* Estilos responsivos */
 @media screen and (max-width: 600px) {
+  .main-container {
+    background-color: transparent; /* Fondo transparente en pantallas pequeñas */
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .custom-app-bar {
     max-width: 100%;
     background-color: transparent !important;
     box-shadow: none !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 56px;
   }
 
   .button-container {
@@ -220,6 +213,34 @@ h5 {
 
   .menu-icon {
     display: block !important;
+  }
+
+  .custom-toolbar {
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /* Ajuste del tamaño y posición del botón hamburguesa */
+  .menu-icon-button {
+    padding: 8px !important;
+    margin: 0 16px 0 0 !important;
+    color: black !important; /* Cambia el color del icono a negro */
+  }
+
+  /* Eliminar el margen izquierdo adicional */
+  .MuiIconButton-edgeStart {
+    margin-left: 0 !important;
+  }
+}
+
+/* Ocultar el botón hamburguesa en pantallas más grandes que 600px */
+@media (min-width: 601px) {
+  .menu-icon-button {
+    display: none !important;
   }
 }
 
@@ -247,6 +268,7 @@ h5 {
   .menu-icon-button {
     padding: 8px !important;
     margin: 0 16px 0 0 !important;
+    color: black !important;
   }
 
   /* Eliminar el margen izquierdo adicional */
@@ -260,17 +282,9 @@ h5 {
   display: none;
 }
 
-/* Clase para el botón hamburguesa */
-.menu-icon-button {
-  color: white !important;
-}
 
-/* Ocultar el botón hamburguesa en pantallas más grandes que 601px */
-@media (min-width: 601px) {
-  .menu-icon-button {
-    display: none !important;
-  }
-}
+
+
 .sticky{
   position: fixed;
   top: 0;

@@ -50,7 +50,7 @@ function Navbar() {
                   edge="start"
                   color="inherit"
                   aria-label="menu"
-                  sx={{ mr: 2, display: { sm: 'none' }, color: 'white' }}
+                  sx={{ mr: 5, mt: 5, display: { md: 'none' }, color: 'black' }}
                   onClick={toggleDrawer(true)}
                 >
                   <MenuIcon />
