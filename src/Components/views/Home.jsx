@@ -89,8 +89,8 @@ function Home() {
           <div className="section2">
             <div className="container2-1">
               <h5>Let's Talk</h5>
-              <p>
-                <a href="mailto:sebastian.pradomelesi@gmail.com">
+              <p >
+                <a className="mail" href="mailto:sebastian.pradomelesi@gmail.com">
                   sebastian.pradomelesi@gmail.com
                 </a>
               </p>

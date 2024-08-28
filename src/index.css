@@ -26,6 +26,7 @@ h5 {
 
 /* ======    Tamano de letra responsiva   ====== */
 
+/* =====      p       === */
 @media screen and (min-width: 768px) and (max-width: 1440px) {
   p {
     font-size: 15px !important;
@@ -52,11 +53,40 @@ h5 {
     line-height: 100% !important;
   }
 }
+/* =====      p       === */
 
+/* =====      mail       === */
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .mail {
+    font-size: 15px !important;
+    line-height: 200% !important;
+  }
+}
+
+/* Mediana: 768px a 375px */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .mail{
+    font-size: 16px !important;
+    line-height: 120% !important;
+  }
+ 
+}
+
+/* Chica: menor a 375px */
+@media screen and (max-width: 374px) {
+  .mail {
+    font-size: 14px !important;
+    line-height: 100% !important;
+  }
+}
+/* =====      mail       === */
 /* ======    Tamano de letra responsiva   ====== */
+
+
+
 /* ======    Márgenes laterales responsivos   ====== */
 
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media screen and (min-width: 768px) and (max-width: 1940px) {
   .container {
     margin-left: 112px !important;
     margin-right: 112px !important;
@@ -64,7 +94,6 @@ h5 {
   }
   .containerLarge {
     margin: 56px;
-    /* width: calc(100% - 112px) !important; */
     padding: 56px;
   }
 
@@ -96,10 +125,10 @@ h5 {
     margin-right: 16px;
   }
   .containerLarge {
-    margin-left: 8px;
-    margin-right: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   .navbarContainerLarge {
     margin-left: 8px;
@@ -197,11 +226,11 @@ h5 {
 /* Estilos responsivos para el Navbar */
 @media screen and (max-width: 450px) {
   .custom-app-bar {
-    width: 56px !important;
+    width: 100% !important;
     height: 56px !important;
-    border-radius: 50% !important;
+    border-radius: 0 !important;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
   }
 
@@ -210,20 +239,19 @@ h5 {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
   }
 
   /* Ajuste del tamaño y posición del botón hamburguesa */
   .menu-icon-button {
     padding: 8px !important;
-    margin: 0 !important;
-    margin-left: 30px !important; /* Margen izquierdo adicional de 30 píxeles */
+    margin: 0 16px 0 0 !important;
   }
 
-  /* Eliminar el margen derecho del botón hamburguesa en modo responsivo */
+  /* Eliminar el margen izquierdo adicional */
   .MuiIconButton-edgeStart {
-    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 }
 
@@ -258,8 +286,25 @@ h5 {
 }
 
 @media (min-width: 768px) {
+  .containerLarge {
+    min-height: 15rem;
+  }
+}
+@media (min-width: 300px) and (max-width: 768px) {
+  .containerLarge {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}
+
+@media (min-width: 768px) {
   .h1Title {
     min-height: 15rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 768px) {
+  .h1Title {
+    min-height: 12rem;
   }
 }
 
@@ -443,6 +488,9 @@ h5 {
   flex-wrap: wrap;
   gap: 2rem; /* 32px */
   justify-content: space-between;
+  max-width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 480px) {
@@ -490,18 +538,18 @@ h5 {
   }
 }
 
-.more-projects-link {
+/* .more-projects-link {
   font-size: 20px;
   line-height: 140%;
   margin: 0;
   font-weight: bold;
   display: flex;
-  align-items: center;
-}
+  align-items: center; 
+}*/
 
-.imageProject {
+/* .imageProject {
   height: 26rem;
-}
+} */
 
 .project-link {
   text-decoration: none;
@@ -516,11 +564,13 @@ h5 {
 
 .project-container:hover {
   transform: scale(1.07);
+  transition: transform 1.6s ease;
+
 }
 
 .project-container {
   width: 100%;
-  padding-top: 56.25%; 
+  /* padding-top: 56.25%;  */
   position: relative;
   overflow: hidden;
 }
@@ -621,6 +671,13 @@ h5 {
   margin-right: -50vw;
   padding-left: calc(50vw - 50%);
   padding-right: calc(50vw - 50%);
+  margin-top: 3rem; /* Añadimos un margen superior por defecto */
+}
+
+@media (max-width: 480px) {
+  .section-slider {
+    margin-top: 3rem; /* Aumentamos el margen superior para pantallas pequeñas */
+  }
 }
 
 .slider-container {

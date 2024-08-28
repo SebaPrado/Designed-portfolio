@@ -65,11 +65,22 @@ function Navbar() {
               </Toolbar>
             </AppBar>
           </Box>
-          <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+          <Drawer
+            anchor="top"
+            open={drawerOpen}
+            onClose={toggleDrawer(false)}
+            sx={{
+              '& .MuiDrawer-paper': {
+                width: '100%',
+                maxHeight: '100%',
+                backgroundColor: 'black',
+              },
+            }}
+          >
             <List>
               {menuItems.map((item) => (
-                <ListItem button key={item.label} onClick={toggleDrawer(false)}>
-                  <ListItemText primary={item.label} />
+                <ListItem button key={item.label} onClick={() => { item.onClick(); toggleDrawer(false)(); }}>
+                  <ListItemText primary={item.label} sx={{ color: 'white', textAlign: 'center' }} />
                 </ListItem>
               ))}
             </List>
