@@ -304,70 +304,81 @@ h5 {
 .containerLarge {
   background-color: #fca211c7;
   border-radius: 40px;
+  min-height: 15rem; /* Altura mínima base */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* @media (min-width: 768px) {
-  .containerLarge {
-    min-height: 15rem;
-  }
-} */
-@media (min-width: 300px) and (max-width: 600px) {
-  .containerLarge {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    
-  }
-  .container2-1{
-    margin-bottom: 2.5rem;
-  }
-}
-@media (min-width: 600px) and (max-width: 768px) {
-  .containerLarge {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    min-height: 35rem;
-  }
-  .containerLarge h1 {
-    margin-top: 8rem;
-  }
-}
-
+/* Ajustes responsivos para el contenedor */
 @media (min-width: 1300px) {
-  .h1Title {
+  .containerLarge {
+    min-height: 18rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1299px) {
+  .containerLarge {
     min-height: 18rem !important;
   }
 }
-@media (min-width: 768px) {
-  .h1Title {
-    min-height: 15rem;
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .containerLarge {
+    margin-top: 3rem;
+    min-height: 33rem;
+    padding-top: 2.5rem;
+    padding-bottom: 10px;
   }
 }
-@media (min-width: 450px) and (max-width: 768px) {
-  .h1Title {
-    min-height: 12rem;
+
+@media (max-width: 599px) {
+  .containerLarge {
+    margin-top: 25px;
+    min-height: 10rem;
+    padding-top: 50px;
+    padding-bottom: 10px;
   }
 }
 
 /* Estilos para el título principal */
 .titulo-principal {
-  margin-top: 4rem;
-  font-size: 7vw; /* Tamaño de fuente responsivo */
-  line-height: 1;
-  word-wrap: break-word; /* Permite que las palabras se rompan si es necesario */
-  overflow-wrap: break-word; /* Asegura que el texto no se desborde */
-  max-width: 100%; /* Asegura que el texto no sea más ancho que su contenedor */
+  margin-top: 0; /* Eliminamos el margen superior */
+  font-size: 7vw;
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
+
+@media screen and (max-width: 830px) {
+  .titulo-principal {
+    min-height: 16rem;
+    font-size: calc(6vw + 1rem);
+
+  }
+}
+
 
 /* Ajustes responsivos para el título principal */
 @media screen and (max-width: 768px) {
   .titulo-principal {
-    font-size: 8vw;
+    min-height: 17.5rem;
+    font-size: calc(7vw + 1.5rem);
   }
 }
+
 @media screen and (max-width: 480px) {
   .titulo-principal {
-    font-size: 8.5vw;
+    min-height: 15.3rem;
+    font-size: calc(7vw + 1rem);
+    margin-bottom: 0;
   }
+  /* .h1Title{
+    min-height: 15rem;
+    margin-top: 30px;
+  } */
+
 }
 
 .changing-text {
@@ -456,8 +467,7 @@ h5 {
 .container2-1 a:hover {
   font-weight: bold;
 }
-
-.container2-2 p {
+.mail.container2-2 p {
   font-size: 20px;
   line-height: 140%;
 }
@@ -1165,3 +1175,52 @@ header{
 } 
 
 /*=====================      efecto paralex      ==================== */
+
+/* Estilo para el correo electrónico */
+.email-link {
+  font-size: 20px !important;
+  line-height: 140% !important;
+  color: black !important;
+  text-decoration: underline !important;
+  transition: font-weight 0.3s ease !important;
+  font-weight: normal !important;
+}
+
+.email-link:hover {
+  font-weight: bold !important;
+}
+
+/* Ajustes responsivos para el correo electrónico */
+@media (max-width: 768px) {
+  .email-link {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .email-link {
+    font-size: 16px !important;
+  }
+}
+
+/* Asegurarse de que no haya estilos específicos de sección que sobrescriban */
+.section-hero .email-link,
+.section-lets-talk .email-link {
+  font-size: 20px !important;
+  line-height: 140% !important;
+}
+
+/* Ajustes responsivos específicos si es necesario */
+@media (max-width: 768px) {
+  .section-hero .email-link,
+  .section-lets-talk .email-link {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-hero .email-link,
+  .section-lets-talk .email-link {
+    font-size: 16px !important;
+  }
+}
