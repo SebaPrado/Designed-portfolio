@@ -604,18 +604,11 @@ h5 {
   }
 }
 
-/* .more-projects-link {
-  font-size: 20px;
-  line-height: 140%;
-  margin: 0;
-  font-weight: bold;
-  display: flex;
-  align-items: center; 
-}*/
-
-/* .imageProject {
-  height: 26rem;
-} */
+@media(max-width:768px){
+  .sectionProjects{
+    margin-bottom: 0 !important;
+  }
+}
 
 .project-link {
   text-decoration: none;
@@ -662,6 +655,9 @@ h5 {
 .project-container:hover .imageProject {
   transform: scale(1.05);
 }
+
+
+
 /* ============================    Section PROJECTS     ========================== */
 
 /* ============================    Section EXPERTISE    ========================== */
