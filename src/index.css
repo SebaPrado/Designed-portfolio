@@ -711,6 +711,8 @@ h5 {
 @media (max-width: 552px) {
   .ecpertiseFlexContainer {
     justify-content: space-around;
+    row-gap: 0px;
+
   }
 
   .expertiseFlexItems {
