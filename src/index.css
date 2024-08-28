@@ -360,11 +360,19 @@ h5 {
 }
 
 
+
 /* Ajustes responsivos para el título principal */
 @media screen and (max-width: 768px) {
   .titulo-principal {
     min-height: 17.5rem;
     font-size: calc(7vw + 1.5rem);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .titulo-principal {
+    min-height: 18rem;
+    font-size: calc(7vw + 1.2rem);
   }
 }
 
