@@ -25,6 +25,8 @@ function About() {
         <div className="number">2</div>
         <div className="number">3</div>
         <div className="number">4</div>
+        <div className="number">4</div>
+
       </div>
 
       <div className="flexbox-container">
