@@ -1,84 +1,301 @@
 import React, { useState, useEffect } from "react";
-import equalvision from "../../../public/equalFront.jpeg";
-import alusur from "../../../public/alusur.jpeg";
-import movie from "../../../public/fakeflix.jpeg";
-import dashboard from "../../../public/equalAdmin.jpeg";
-import matesito from "../../../public/matesito.png";
-
+import { useRef } from "react";
 import {
-  FaHtml5,
-  FaCss3,
-  FaReact,
-  FaNodeJs,
-  FaBootstrap,
-  FaGitAlt,
-  FaFigma,
   FaArrowRight,
   FaGithub,
   FaLinkedin,
   FaInstagram,
+  FaPhoneAlt,
 } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
-import { SiRedux, SiInsomnia } from "react-icons/si";
+import { CiMail } from "react-icons/ci";
+import { FiPhone } from "react-icons/fi";
+import { IoLocationOutline } from "react-icons/io5";
 
 function Home() {
-  console.log("Renderizando componente Home");
-  const techIcons = [
-    { icon: FaHtml5, name: "HTML" },
-    { icon: FaCss3, name: "CSS" },
-    { icon: IoLogoJavascript, name: "JavaScript" },
-    { icon: FaReact, name: "React" },
-    { icon: FaNodeJs, name: "NodeJS" },
-    { icon: SiRedux, name: "Redux" },
-    { icon: FaBootstrap, name: "Bootstrap" },
-    { icon: FaGitAlt, name: "Git" },
-    { icon: FaGithub, name: "Github" },
-    { icon: SiInsomnia, name: "Insomnia" },
-    { icon: FaFigma, name: "Figma" },
-  ];
+  //   const [displayedWord, setDisplayedWord] = useState("");
+  //   const [isDeleting, setIsDeleting] = useState(false);
+  //   const words = [" a twist", " designing mind"];
+  // const [wordIndex, setWordIndex] = useState(0);
 
-  const [displayedWord, setDisplayedWord] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const words = [" a twist", " a design view"];
-  const [wordIndex, setWordIndex] = useState(0);
+  // useEffect(() => {
+  //   let timer;
+
+  //   const typeEffect = () => {
+  //     const currentWord = words[wordIndex];
+
+  //     if (!isDeleting) {
+  //       if (displayedWord.length < currentWord.length) {
+  //         setDisplayedWord(currentWord.slice(0, displayedWord.length + 1));
+  //         timer = setTimeout(typeEffect, 250);
+  //       } else {
+  //         // Palabra completa, espera 4 segundos antes de borrar
+  //         timer = setTimeout(() => setIsDeleting(true), 4000);
+  //       }
+  //     } else {
+  //       if (displayedWord.length > 0) {
+  //         setDisplayedWord(currentWord.slice(0, displayedWord.length - 1));
+  //         timer = setTimeout(typeEffect, 50);
+  //       } else {
+  //         // Palabra borrada, cambia a la siguiente palabra
+  //         setIsDeleting(false);
+  //         setWordIndex((prev) => (prev + 1) % words.length);
+  //         timer = setTimeout(typeEffect, 250);
+  //       }
+  //     }
+  // };
+
+  //   timer = setTimeout(typeEffect, 100);
+
+  //   return () => clearTimeout(timer);
+  // }, [displayedWord, isDeleting, wordIndex, words]);
+
+  // ======================        Use Effect 1     ====================================
+
+  const titleRef = useRef(null); // Crear referencia para el título
+  const [isVisible, setIsVisible] = useState(false); // Estado para visibilidad
+
+  const projectRef = useRef(null);
+  const [projectVisible, setProjectVisible] = useState(false); // Estado para visibilidad
 
   useEffect(() => {
-    let timer;
-
-    const typeEffect = () => {
-      const currentWord = words[wordIndex];
-
-      if (!isDeleting) {
-        if (displayedWord.length < currentWord.length) {
-          setDisplayedWord(currentWord.slice(0, displayedWord.length + 1));
-          timer = setTimeout(typeEffect, 250);
-        } else {
-          // Palabra completa, espera 4 segundos antes de borrar
-          timer = setTimeout(() => setIsDeleting(true), 4000);
-        }
-      } else {
-        if (displayedWord.length > 0) {
-          setDisplayedWord(currentWord.slice(0, displayedWord.length - 1));
-          timer = setTimeout(typeEffect, 50);
-        } else {
-          // Palabra borrada, cambia a la siguiente palabra
-          setIsDeleting(false);
-          setWordIndex((prev) => (prev + 1) % words.length);
-          timer = setTimeout(typeEffect, 250);
-        }
+    const handleScroll = () => {
+      if (titleRef.current) {
+        const rect = titleRef.current.getBoundingClientRect();
+        setIsVisible(rect.top < window.innerHeight && rect.bottom > 0); // Verificar si está en vista
+      }
+      if (projectRef.current) {
+        const rect = projectRef.current.getBoundingClientRect();
+        setProjectVisible(rect.top < window.innerHeight && rect.bottom > 0); // Verificar si está en vista
       }
     };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    timer = setTimeout(typeEffect, 100);
+  // ======================        Use Effect 2     ====================================//
 
-    return () => clearTimeout(timer);
-  }, [displayedWord, isDeleting, wordIndex, words]);
+  const StitleRef = useRef(null); // Crear referencia para el título
+  const [sisVisible, setSIsVisible] = useState(false); // Estado para visibilidad
 
-  console.log(techIcons);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (StitleRef.current) {
+        const Srect = StitleRef.current.getBoundingClientRect();
+        setSIsVisible(Srect.top < window.innerHeight && Srect.bottom > 0); // Verificar si está en vista
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
+      {/* ==========================================      sectionEmpresa        =================================== */}
+
+      <div className="sectionEmpresa" id="empresa">
+        <div className="titleH3 tituloLaEmpresa" ref={projectRef}>
+          <h3
+            className={`tituloLaEmpresa ${projectVisible ? "slide-left" : ""}`}
+          >
+            La empresa{" "}
+          </h3>
+        </div>
+        <div className="">
+          <p className="m-2">
+            Desde 1991 visualizamos a Uruguay y la región como un mercado muy
+            promisorio para el desarrollo de la construcción civil, basado en
+            sistemas modernos, confiables y duraderos.{" "}
+          </p>{" "}
+          <p>
+            Acompañando su proyecto desde el inicio, hemos creado la más
+            eficiente red de distribución y logística de perfiles, sistemas de
+            arquitectura de aluminio, cristales y accesorios. Para ello contamos
+            con los mejores proveedores a nivel mundial, tanto en las áreas de
+            tecnología de producto como en servicios, sumándole un servicio
+            técnico y de postventa que garantiza el éxito de su obra.
+          </p>
+        </div>
+
+        <div className="container3-4">
+          <p className="more-projects-link">
+            more <FaArrowRight style={{ marginLeft: "8px" }} />
+          </p>
+        </div>
+      </div>
+
+      <div id="obras"></div>
+
+      {/* ======================================     sectionEmpresa />       =================================== */}
+
+      {/* =======================================    < section Obras       =================================== */}
+
+      <div className="sectionObras">
+        <div className="titleH3 " ref={titleRef} style={{ textAlign: "right" }}>
+          <h3
+            className={`tituloLaEmpresa ${
+              isVisible ? "slide-left" : ""
+            } tituloObrasDestacadas`}
+          >
+            Obras destacadas{" "}
+          </h3>
+        </div>
+        <div className="gridImagenes">
+          <section class="layout">
+            <div class="uno">
+              <p>Art Carrasco</p>
+            </div>
+            <div class="dos">
+              <p>Sofitel</p>
+            </div>
+            <div class="tres">
+              <p>Rincon del Bosque</p>
+            </div>
+            <div class="cuatro">
+              <p>Rincon del Bosque</p>
+            </div>
+            <div class="cinco">
+              <p>Art Carrasco</p>
+            </div>
+          </section>
+        </div>
+
+        <div className="container3-4">
+          <p className="more-projects-link">
+            more <FaArrowRight style={{ marginLeft: "8px" }} />
+          </p>
+        </div>
+      </div>
+
+      {/* ============================           section Obras  />     =================================== */}
+      {/* ============================          < section Slider      =================================== */}
+
+      <section className="section-slider proveedores">
+        <div className="titleH3  " style={{ textAlign: "center" }}>
+          {/* <div className="provTech">
+            <h3>Proveedores y tecnologias </h3>
+          </div> */}
+        </div>
+        <div className="slider-container">
+          <div className="slider-icons">
+            {/* Nuevas imágenes para el slider */}
+            <div className="slider-icon">
+              <img src={"../../../public/iseo.jpg"} alt="Iseo" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/sapa.jpg"} alt="Sapa" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/vasa.jpg"} alt="Vasa" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/technal.jpg"} alt="Technal" />
+            </div>
+            {/* Duplicamos los iconos para crear un efecto de bucle infinito */}
+            <div className="slider-icon">
+              <img src={"../../../public/iseo.jpg"} alt="Iseo" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/sapa.jpg"} alt="Sapa" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/vasa.jpg"} alt="Vasa" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/technal.jpg"} alt="Technal" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/iseo.jpg"} alt="Iseo" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/sapa.jpg"} alt="Sapa" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/vasa.jpg"} alt="Vasa" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/technal.jpg"} alt="Technal" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/iseo.jpg"} alt="Iseo" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/sapa.jpg"} alt="Sapa" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/vasa.jpg"} alt="Vasa" />
+            </div>
+            <div className="slider-icon">
+              <img src={"../../../public/technal.jpg"} alt="Technal" />
+            </div>
+          </div>
+        </div>
+        <div id="contacto"></div>
+      </section>
+
+      {/* ============================           section Slider />      =================================== */}
+
+      {/* ============================          < section Contacto       =================================== */}
+
+      <section>
+        <div className="sectionEmpresa">
+          <div className="titleH3 tituloLaEmpresa titContacto" ref={StitleRef}>
+            <h3 className={`tituloLaEmpresa ${sisVisible ? "slide-left" : ""}`}>
+              Contacto{" "}
+            </h3>
+          </div>
+          <div>
+            <p className="loAtenderemos">
+              Lo atenderemos en nuestro horario de atención, de lunes a viernes
+              10:00 a 13:00 y de 13:30 a 17:00 horas.
+            </p>
+          </div>
+          <div className=" itemsContacto">
+            <div className="item">
+              <div>
+                <FiPhone className="iconSize" />
+              </div>
+              <div>
+                {" "}
+                <p>(+598) 2924 8579 / 092 009661</p>
+              </div>
+            </div>
+            <div className="item">
+              <div>
+                <CiMail className="iconSize" />
+              </div>
+              <div>
+                
+                <p>info@alusur.com.uy</p>
+              </div>
+            </div>
+            <div className="item">
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center" }}> {/* Centrar contenido */}
+                <a
+                  href="https://www.google.com/maps/place/ALUSUR/@-34.8907568,-130.0096206,3z/data=!4m10!1m2!2m1!1salusur!3m6!1s0x959f8161e058b1d5:0xb8e24d92c0a13ba9!8m2!3d-34.8907568!4d-56.1814956!15sCgZhbHVzdXKSARJhbHVtaW5pdW1fc3VwcGxpZXLgAQA!16s%2Fg%2F11f658mcq4?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", color: "inherit" }} // Eliminar subrayado y color negro
+                >
+                  <div>
+                    <IoLocationOutline className="iconSize" />
+                  </div>
+                  <p>Hocquart 1660, Montevideo, Uruguay</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="container3-4">
+            <p className="more-projects-link">
+              more <FaArrowRight style={{ marginLeft: "8px" }} />
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* ============================           section Contacto       =================================== */}
+
       <div className="" id="home">
-        <section className="section1 containerLarge">
+        {/* <section className="section1 containerLarge">
           <div className="h1Title">
             <h1 className="titulo-principal">
               A fullstack developer with{" "}
@@ -106,11 +323,11 @@ function Home() {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ==========================      PROJECTS         =====================  */}
 
-        <section className="section3 container" id="projects">
+        {/* <section className="section3 container" id="projects">
           <div className="container3-1">
             <div className="titleH3">
               <h3>Projects</h3>
@@ -124,12 +341,12 @@ function Home() {
               more <FaArrowRight style={{ marginLeft: "8px" }} />
             </p>
           </div>
-        </section>
+        </section> */}
         <section className="sectionProjects container">
           {/* ================   Proyect 1   ==================== */}
 
           <div className="column-container-s4">
-            <div
+            {/* <div
               className="singleProyectContainer
 "
             >
@@ -168,18 +385,18 @@ function Home() {
                   service built with Node.js, Express, Supabase and SQL.
                 </p>
               </div>
-            </div>
+            </div> */}
 
             {/* ================   Proyect 1   ==================== */}
             {/* ================   Proyect 2   ==================== */}
 
-            <div
+            {/* <div
               className="singleProyectContainer
 "
             >
               <div className="column-content-s4 project-container">
                 <a
-                  href="https://alusur.com.uy"
+                  href="http://alusur.com.uy/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -190,7 +407,7 @@ function Home() {
                 <div className="projectsFlexItems">
                   <h4>
                     <a
-                      href="https://alusur.com.uy"
+                      href="https://alusur.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="project-link"
@@ -206,12 +423,12 @@ function Home() {
                   project was developed using Node, JavaScript, and CSS
                 </p>
               </div>
-            </div>
+            </div> */}
 
             {/* ================   Proyect 2   ==================== */}
             {/* ================   Proyect 3  ==================== */}
 
-            <div className="singleProyectContainer">
+            {/* <div className="singleProyectContainer">
               <div className="column-content-s4 project-container">
                 <a
                   href="https://equalvision-admin.vercel.app/"
@@ -245,12 +462,12 @@ function Home() {
                   with Node.js, Express, Supabase and SQL.
                 </p>
               </div>
-            </div>
+            </div> */}
 
             {/* ================   Proyect 3  ==================== */}
             {/* ================   Proyect 4  ==================== */}
 
-            <div
+            {/* <div
               className="singleProyectContainer
 "
             >
@@ -287,14 +504,14 @@ function Home() {
                   framework and Redux for state management.
                 </p>
               </div>
-            </div>
+            </div> */}
             {/* ================   Proyect 4  ==================== */}
           </div>
         </section>
         {/* ==========================      PROJECTS         =====================  */}
         {/* ==========================      EXPERTISE         =====================  */}
 
-        <section className="section5 containerLarge" id="expertise">
+        {/* <section className="section5 containerLarge" id="expertise">
           <div className="titleH3">
             <h3>Expertise</h3>
           </div>
@@ -304,9 +521,9 @@ function Home() {
                 <span className="dot"></span>Fullstack developer
               </h4>
               <p>
-                Looking for a developer who can handle it all? I’ve got you
-                covered. From front to back, I’ll build a seamless experience
-                that aligns with your brand. Let’s take your business to the
+                Looking for a developer who can handle it all? I've got you
+                covered. From front to back, I'll build a seamless experience
+                that aligns with your brand. Let's take your business to the
                 next level with a strong, cohesive digital presence
               </p>
             </div>
@@ -317,9 +534,9 @@ function Home() {
               </h4>
               <p>
                 Your website deserves to stand out. I craft responsive,
-                user-friendly sites that capture your brand’s essence without
-                the hassle of complex code. With Webflow at the core, you’ll get
-                a secure, custom site that’s as unique as your business.
+                user-friendly sites that capture your brand's essence without
+                the hassle of complex code. With Webflow at the core, you'll get
+                a secure, custom site that's as unique as your business.
               </p>
             </div>
 
@@ -328,7 +545,7 @@ function Home() {
                 <span className="dot"></span>Wordpress / PHP
               </h4>
               <p>
-                Need a site that’s both powerful and flexible? I create custom
+                Need a site that's both powerful and flexible? I create custom
                 WordPress and PHP solutions that fit your needs perfectly. No
                 bloated code or generic templates—just a sleek, efficient
                 website tailored to your goals.
@@ -351,14 +568,14 @@ function Home() {
               </h4>
               <p>
                 Powered by mate—the South American drink that keeps me awake and
-                sharp—I’m always ready to deliver results on time.
-                Consider it my antioxidant secret weapon for staying focused and
-                ensuring your project is finished right on schedule.
+                sharp—I'm always ready to deliver results on time. Consider it
+                my antioxidant secret weapon for staying focused and ensuring
+                your project is finished right on schedule.
               </p>
             </div>
           </div>
-        </section>
-        <section className="section-slider">
+        </section> */}
+        {/* <section className="section-slider">
           <div className="slider-container">
             <div className="slider-icons">
               {techIcons.map((tech, index) => (
@@ -367,7 +584,7 @@ function Home() {
                   <span className="icon-name">{tech.name}</span>
                 </div>
               ))}
-              {/* Duplicamos los iconos para crear un efecto de bucle infinito */}
+             
               {techIcons.map((tech, index) => (
                 <div key={`duplicate-${index}`} className="slider-icon">
                   <tech.icon className="icon" />
@@ -376,29 +593,11 @@ function Home() {
               ))}
             </div>
           </div>
-        </section>
-        {/* <section className="section-testimonials container">
-          <h3>Testimonials</h3>
-          <div className="testimonialsFlexContainer">
-            <div className="testimonialsFlexItems testimonial-content">
-              <p>
-                "Joey is a remarkable artist. He grasps abstract ideas and
-                transforms them into exceptional visuals. Throughout the years,
-                I've witnessed him produce everything from small symbols to
-                comprehensive adaptive web pages. He has crafted clothing items
-                like tees and caps, promotional products, and professional
-                literature."
-              </p>
-            </div>
-            <div className="testimonialsFlexItems testimonial-info">
-              <div className="autor">
-                <h6>Sebastian</h6>
-                <p>Product Lead</p>
-              </div>
-            </div>
-          </div>
         </section> */}
-        <section className="section-lets-talk container">
+
+        {/*======================================= Slider2 ==============================*/}
+
+        {/* <section className="section-lets-talk container">
           <div className="lets-talk-flexContainer">
             <div className="lets-talk-flexItem">
               <h2>Let's talk!</h2>
@@ -412,7 +611,7 @@ function Home() {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
 
       {/* Nuevo footer */}
