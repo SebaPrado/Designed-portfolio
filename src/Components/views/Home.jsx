@@ -179,7 +179,7 @@ function Home() {
           <div className="slider-icons">
             {/* Nuevas imágenes para el slider */}
             <div className="slider-icon">
-              <img src={"../../../public/iseo.jpg"} alt="Iseo" />
+              <img src={require("../../../public/iseo.jpg")} alt="Iseo" />
             </div>
             <div className="slider-icon">
               <img src={"../../../public/sapa.jpg"} alt="Sapa" />
@@ -264,12 +264,20 @@ function Home() {
                 <CiMail className="iconSize" />
               </div>
               <div>
-                
                 <p>info@alusur.com.uy</p>
               </div>
             </div>
             <div className="item">
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center" }}> {/* Centrar contenido */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  textAlign: "center",
+                }}
+              >
+                {" "}
+                {/* Centrar contenido */}
                 <a
                   href="https://www.google.com/maps/place/ALUSUR/@-34.8907568,-130.0096206,3z/data=!4m10!1m2!2m1!1salusur!3m6!1s0x959f8161e058b1d5:0xb8e24d92c0a13ba9!8m2!3d-34.8907568!4d-56.1814956!15sCgZhbHVzdXKSARJhbHVtaW5pdW1fc3VwcGxpZXLgAQA!16s%2Fg%2F11f658mcq4?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
